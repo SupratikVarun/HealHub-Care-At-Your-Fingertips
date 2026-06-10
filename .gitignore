@@ -1,0 +1,13 @@
+# Root level ignore
+node_modules/
+.env
+.env.local
+
+# Frontend specific
+frontend/node_modules/
+frontend/dist/
+frontend/.env*
+
+# Backend specific
+backend/node_modules/
+backend/.env
