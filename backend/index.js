@@ -22,6 +22,13 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+  res.status(200).json({
+    status: 'success',
+    message: 'HealHub Backend is running. Use /api/health or /api/auth, /api/doctors, /api/appointments.',
+  });
+});
+
 app.get('/api/health', (req, res) => {
   res.status(200).json({
     status: 'success',
