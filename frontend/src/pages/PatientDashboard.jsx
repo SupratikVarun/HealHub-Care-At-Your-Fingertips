@@ -79,6 +79,9 @@ function PatientDashboard() {
                 <p><strong>Date:</strong> {new Date(appointment.date).toLocaleDateString()}</p>
                 <p><strong>Time:</strong> {appointment.time}</p>
                 <p><strong>Status:</strong> {appointment.status}</p>
+                {appointment.responseMessage && (
+                  <p><strong>Doctor Response:</strong> {appointment.responseMessage}</p>
+                )}
               </div>
             ))
           )}

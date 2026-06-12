@@ -36,7 +36,16 @@ export const getAppointments = async (req, res) => {
 
 export const updateAppointmentStatus = async (req, res) => {
   const { id } = req.params;
-  const { status } = req.body;
+  const { status, responseMessage } = req.body;
+
+  if (!status) {
+    return res.status(400).json({ message: 'Appointment status is required' });
+  }
+
+  const allowedStatuses = ['confirmed', 'declined'];
+  if (!allowedStatuses.includes(status)) {
+    return res.status(400).json({ message: 'Invalid appointment status update' });
+  }
 
   const appointment = await Appointment.findById(id);
   if (!appointment) {
@@ -47,7 +56,16 @@ export const updateAppointmentStatus = async (req, res) => {
     return res.status(403).json({ message: 'Only the assigned doctor can update the appointment status' });
   }
 
-  appointment.status = status || appointment.status;
+  if (appointment.status !== 'pending') {
+    return res.status(400).json({ message: 'Only pending appointments can be updated' });
+  }
+
+  if (status === 'declined' && !responseMessage) {
+    return res.status(400).json({ message: 'Please provide a reason for declining the appointment' });
+  }
+
+  appointment.status = status;
+  appointment.responseMessage = responseMessage || appointment.responseMessage;
   await appointment.save();
 
   return res.json(appointment);

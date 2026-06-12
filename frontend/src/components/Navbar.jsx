@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import logo from "../assets/HealHub.png";
 
 function Navbar() {
   const { user, logout } = useAuth();
@@ -13,7 +14,9 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="container nav-container">
-        <h2 className="logo">HealHub</h2>
+        <div className="logo-container">
+  <img src={logo} alt="HealHub Logo" className="logo-image" />
+</div>
 
         <div className="nav-links">
           <Link to="/">Home</Link>

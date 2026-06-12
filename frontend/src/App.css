@@ -240,3 +240,15 @@ body {
   cursor: pointer;
   font-weight: 600;
 }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-image {
+  width: 165px;
+  height: auto;
+  object-fit: contain;
+}
