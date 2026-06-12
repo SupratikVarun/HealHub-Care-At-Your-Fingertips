@@ -34,22 +34,18 @@ const AuthProvider = ({ children }) => {
     localStorage.setItem('healhubToken', nextToken);
   };
 
-  const login = async (phone) => {
-    const result = await api.post('/auth/login', { phone });
+  const login = async (phone, password) => {
+    const result = await api.post('/auth/login', { phone, password });
     setAuthState(result);
     return result;
   };
 
   const registerPatient = async (payload) => {
-    const result = await api.post('/auth/register-patient', payload);
-    setAuthState(result);
-    return result;
+    return api.post('/auth/register-patient', payload);
   };
 
   const registerDoctor = async (payload) => {
-    const result = await api.post('/auth/register-doctor', payload);
-    setAuthState(result);
-    return result;
+    return api.post('/auth/register-doctor', payload);
   };
 
   const logout = () => {

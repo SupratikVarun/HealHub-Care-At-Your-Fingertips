@@ -7,6 +7,7 @@ function Login() {
   const { user, login } = useAuth();
   const navigate = useNavigate();
   const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
@@ -22,7 +23,7 @@ function Login() {
     setSubmitting(true);
 
     try {
-      const result = await login(phone.trim());
+      const result = await login(phone.trim(), password);
       navigate(result.user.role === 'doctor' ? '/doctor-dashboard' : '/patient-dashboard');
     } catch (err) {
       setError(err.message || 'Login failed');
@@ -38,7 +39,7 @@ function Login() {
       <div className="form-page">
         <div className="form-card">
           <h2>Login to HealHub</h2>
-          <p>Enter your phone number to login.</p>
+          <p>Enter your phone number and password to login.</p>
 
           <form onSubmit={handleSubmit}>
             <input
@@ -46,6 +47,13 @@ function Login() {
               value={phone}
               onChange={(event) => setPhone(event.target.value)}
               placeholder="Enter phone number"
+              required
+            />
+            <input
+              type="password"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+              placeholder="Enter password"
               required
             />
 

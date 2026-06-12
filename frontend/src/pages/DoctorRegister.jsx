@@ -9,6 +9,7 @@ function DoctorRegister() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
+    password: "",
     specialization: "",
     experience: "",
     clinic: "",
@@ -29,7 +30,7 @@ function DoctorRegister() {
 
     try {
       await registerDoctor(formData);
-      navigate('/doctor-dashboard');
+      navigate('/login');
     } catch (err) {
       setError(err.message || 'Registration failed');
     } finally {
@@ -109,7 +110,14 @@ function DoctorRegister() {
               placeholder="City"
               required
             />
-
+            <input
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              type="password"
+              placeholder="Create Password"
+              required
+            />
             <button type="submit" disabled={loading}>
               {loading ? 'Registering...' : 'Register as Doctor'}
             </button>

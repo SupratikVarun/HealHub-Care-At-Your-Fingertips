@@ -9,6 +9,7 @@ function PatientRegister() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
+    password: "",
     age: "",
     gender: "",
     city: "",
@@ -27,7 +28,7 @@ function PatientRegister() {
 
     try {
       await registerPatient(formData);
-      navigate('/patient-dashboard');
+      navigate('/login');
     } catch (err) {
       setError(err.message || 'Registration failed');
     } finally {
@@ -83,6 +84,14 @@ function PatientRegister() {
               onChange={handleChange}
               type="text"
               placeholder="City"
+              required
+            />
+            <input
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              type="password"
+              placeholder="Create Password"
               required
             />
 
