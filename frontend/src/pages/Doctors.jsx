@@ -41,6 +41,7 @@ const sampleDoctors = [
 function Doctors() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [doctors, setDoctors] = useState([]);
+  const [backendAvailable, setBackendAvailable] = useState(true);
   const [nameQuery, setNameQuery] = useState(searchParams.get('name') || '');
   const [specializationQuery, setSpecializationQuery] = useState(searchParams.get('specialization') || '');
   const [loading, setLoading] = useState(true);
@@ -52,9 +53,11 @@ function Doctors() {
 
     try {
       const data = await api.get(`/doctors${queryString}`);
+      setBackendAvailable(true);
       setDoctors(data || []);
     } catch (err) {
-      setError('Unable to load doctors from backend.');
+      setError('Unable to load doctors from backend. Showing sample doctors.');
+      setBackendAvailable(false);
       setDoctors([]);
     } finally {
       setLoading(false);
@@ -94,7 +97,7 @@ function Doctors() {
     await loadDoctors();
   };
 
-  const isUsingBackend = doctors.length > 0 || (nameQuery === '' && specializationQuery === '');
+  const isUsingBackend = backendAvailable && doctors.length > 0;
   const filteredSampleDoctors = sampleDoctors.filter((doctor) => {
     const matchesName = nameQuery
       ? doctor.name.toLowerCase().includes(nameQuery.toLowerCase())
@@ -138,7 +141,10 @@ function Doctors() {
 
         {loading && <p>Loading doctors...</p>}
         {error && <p className="form-error">{error}</p>}
-        {!loading && doctorList.length === 0 && (
+        {!backendAvailable && (
+          <p className="form-error">Backend unavailable — showing sample doctors.</p>
+        )}
+        {!loading && backendAvailable && doctorList.length === 0 && (
           <p className="form-error">No doctors found matching your search.</p>
         )}
 
