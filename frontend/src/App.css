@@ -123,6 +123,31 @@ body {
   background-color: #f7fbff;
 }
 
+.search-form {
+  margin-bottom: 26px;
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto auto;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.input-row input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #0f172a;
+}
+
+.doctor-btn.secondary {
+  background-color: #64748b;
+}
+
 .section.light {
   background-color: white;
 }

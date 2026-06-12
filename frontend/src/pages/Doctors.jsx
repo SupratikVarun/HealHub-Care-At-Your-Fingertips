@@ -40,26 +40,61 @@ const sampleDoctors = [
 
 function Doctors() {
   const [doctors, setDoctors] = useState([]);
+  const [nameQuery, setNameQuery] = useState('');
+  const [specializationQuery, setSpecializationQuery] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    const loadDoctors = async () => {
-      try {
-        const data = await api.get('/doctors');
-        setDoctors(data || []);
-      } catch (err) {
-        setError('Unable to load doctors from backend. Showing sample doctors.');
-      } finally {
-        setLoading(false);
-      }
-    };
+  const loadDoctors = async (queryString = '') => {
+    setLoading(true);
+    setError('');
 
+    try {
+      const data = await api.get(`/doctors${queryString}`);
+      setDoctors(data || []);
+    } catch (err) {
+      setError('Unable to load doctors from backend. Showing sample doctors.');
+      setDoctors([]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
     loadDoctors();
   }, []);
 
+  const handleSearch = async (event) => {
+    event.preventDefault();
+    const params = new URLSearchParams();
+
+    if (nameQuery.trim()) {
+      params.set('name', nameQuery.trim());
+    }
+    if (specializationQuery.trim()) {
+      params.set('specialization', specializationQuery.trim());
+    }
+
+    await loadDoctors(params.toString() ? `?${params.toString()}` : '');
+  };
+
+  const handleClear = async () => {
+    setNameQuery('');
+    setSpecializationQuery('');
+    await loadDoctors();
+  };
+
   const hasBackendDoctors = doctors.length > 0;
-  const doctorList = hasBackendDoctors ? doctors : sampleDoctors;
+  const filteredSampleDoctors = sampleDoctors.filter((doctor) => {
+    const matchesName = nameQuery
+      ? doctor.name.toLowerCase().includes(nameQuery.toLowerCase())
+      : true;
+    const matchesSpecialization = specializationQuery
+      ? doctor.specialization.toLowerCase().includes(specializationQuery.toLowerCase())
+      : true;
+    return matchesName && matchesSpecialization;
+  });
+  const doctorList = hasBackendDoctors ? doctors : filteredSampleDoctors;
 
   return (
     <>
@@ -67,6 +102,29 @@ function Doctors() {
 
       <div className="section">
         <h2>Available Doctors</h2>
+
+        <form className="search-form" onSubmit={handleSearch}>
+          <div className="input-row">
+            <input
+              type="text"
+              value={nameQuery}
+              onChange={(event) => setNameQuery(event.target.value)}
+              placeholder="Search by doctor name"
+            />
+            <input
+              type="text"
+              value={specializationQuery}
+              onChange={(event) => setSpecializationQuery(event.target.value)}
+              placeholder="Search by specialization"
+            />
+            <button type="submit" className="doctor-btn">
+              Search
+            </button>
+            <button type="button" className="doctor-btn secondary" onClick={handleClear}>
+              Clear
+            </button>
+          </div>
+        </form>
 
         {loading && <p>Loading doctors...</p>}
         {error && <p className="form-error">{error}</p>}

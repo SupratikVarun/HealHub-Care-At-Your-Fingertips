@@ -12,18 +12,24 @@ const buildHeaders = (token, hasBody = false) => {
 };
 
 const request = async (endpoint, { method = 'GET', body, token } = {}) => {
-  const response = await fetch(`${API_BASE_URL}${endpoint}`, {
-    method,
-    headers: buildHeaders(token, Boolean(body)),
-    body: body ? JSON.stringify(body) : undefined,
-  });
+  try {
+    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+      method,
+      headers: buildHeaders(token, Boolean(body)),
+      body: body ? JSON.stringify(body) : undefined,
+    });
 
-  const data = await response.json().catch(() => null);
-  if (!response.ok) {
-    const message = data?.message || 'Request failed';
-    throw new Error(message);
+    const data = await response.json().catch(() => null);
+    if (!response.ok) {
+      const message = data?.message || `Request failed with status ${response.status}`;
+      throw new Error(message);
+    }
+    return data;
+  } catch (err) {
+    // Network errors (CORS, DNS, refused connection) will be caught here
+    console.error('API request error', { endpoint, method, err });
+    throw new Error(err.message || 'Network error');
   }
-  return data;
 };
 
 export const api = {
