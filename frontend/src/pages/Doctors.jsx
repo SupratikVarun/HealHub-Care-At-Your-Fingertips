@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { api } from "../api";
 
@@ -39,9 +39,10 @@ const sampleDoctors = [
 ];
 
 function Doctors() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [doctors, setDoctors] = useState([]);
-  const [nameQuery, setNameQuery] = useState('');
-  const [specializationQuery, setSpecializationQuery] = useState('');
+  const [nameQuery, setNameQuery] = useState(searchParams.get('name') || '');
+  const [specializationQuery, setSpecializationQuery] = useState(searchParams.get('specialization') || '');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -53,7 +54,7 @@ function Doctors() {
       const data = await api.get(`/doctors${queryString}`);
       setDoctors(data || []);
     } catch (err) {
-      setError('Unable to load doctors from backend. Showing sample doctors.');
+      setError('Unable to load doctors from backend.');
       setDoctors([]);
     } finally {
       setLoading(false);
@@ -61,7 +62,14 @@ function Doctors() {
   };
 
   useEffect(() => {
-    loadDoctors();
+    const params = new URLSearchParams();
+    if (nameQuery.trim()) params.set('name', nameQuery.trim());
+    if (specializationQuery.trim()) params.set('specialization', specializationQuery.trim());
+
+    const queryString = params.toString() ? `?${params.toString()}` : '';
+    setSearchParams(params);
+    loadDoctors(queryString);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSearch = async (event) => {
@@ -75,16 +83,18 @@ function Doctors() {
       params.set('specialization', specializationQuery.trim());
     }
 
+    setSearchParams(params);
     await loadDoctors(params.toString() ? `?${params.toString()}` : '');
   };
 
   const handleClear = async () => {
     setNameQuery('');
     setSpecializationQuery('');
+    setSearchParams({});
     await loadDoctors();
   };
 
-  const hasBackendDoctors = doctors.length > 0;
+  const isUsingBackend = doctors.length > 0 || (nameQuery === '' && specializationQuery === '');
   const filteredSampleDoctors = sampleDoctors.filter((doctor) => {
     const matchesName = nameQuery
       ? doctor.name.toLowerCase().includes(nameQuery.toLowerCase())
@@ -94,7 +104,7 @@ function Doctors() {
       : true;
     return matchesName && matchesSpecialization;
   });
-  const doctorList = hasBackendDoctors ? doctors : filteredSampleDoctors;
+  const doctorList = isUsingBackend ? doctors : filteredSampleDoctors;
 
   return (
     <>
@@ -128,6 +138,9 @@ function Doctors() {
 
         {loading && <p>Loading doctors...</p>}
         {error && <p className="form-error">{error}</p>}
+        {!loading && doctorList.length === 0 && (
+          <p className="form-error">No doctors found matching your search.</p>
+        )}
 
         <div className="cards">
           {doctorList.map((doctor) => (
