@@ -65,7 +65,7 @@ function MyAppointments() {
           <div className="cards">
             {appointments.map((appointment) => (
               <div className="card" key={appointment._id}>
-                <h3>{user.role === 'doctor' ? appointment.patient?.name : appointment.doctor?.name}</h3>
+                <h3>{user.role === 'doctor' ? (appointment.patient?.name || appointment.patient?.phone || 'Unknown') : (appointment.doctor?.name || appointment.doctor?.phone || 'Unknown')}</h3>
                 <p><strong>Specialization:</strong> {appointment.doctor?.specialization || 'N/A'}</p>
                 <p><strong>Date:</strong> {new Date(appointment.date).toLocaleDateString()}</p>
                 <p><strong>Time:</strong> {appointment.time}</p>

@@ -106,7 +106,7 @@ function DoctorDashboard() {
           ) : (
             appointments.map((appointment) => (
               <div key={appointment._id} className="appointment-card">
-                <p><strong>Patient:</strong> {appointment.patient?.name || 'Unknown'}</p>
+                <p><strong>Patient:</strong> {appointment.patient?.name || appointment.patient?.phone || 'Unknown'}</p>
                 <p><strong>Date:</strong> {new Date(appointment.date).toLocaleDateString()}</p>
                 <p><strong>Time:</strong> {appointment.time}</p>
                 <p><strong>Status:</strong> {appointment.status}</p>
@@ -123,7 +123,12 @@ function DoctorDashboard() {
                       <button type="button" onClick={() => handleUpdateStatus(appointment._id, 'confirmed')}>
                         Accept
                       </button>
-                      <button type="button" onClick={() => handleUpdateStatus(appointment._id, 'declined')}>
+                      <button
+                        type="button"
+                        onClick={() => handleUpdateStatus(appointment._id, 'declined')}
+                        disabled={!responseMessages[appointment._id]?.trim()}
+                        className={!responseMessages[appointment._id]?.trim() ? 'disabled-button' : ''}
+                      >
                         Decline
                       </button>
                     </div>

@@ -75,7 +75,7 @@ function PatientDashboard() {
           ) : (
             appointments.map((appointment) => (
               <div key={appointment._id} className="appointment-card">
-                <p><strong>Doctor:</strong> {appointment.doctor?.name || 'Unknown'}</p>
+                <p><strong>Doctor:</strong> {appointment.doctor?.name || appointment.doctor?.phone || 'Unknown'}</p>
                 <p><strong>Date:</strong> {new Date(appointment.date).toLocaleDateString()}</p>
                 <p><strong>Time:</strong> {appointment.time}</p>
                 <p><strong>Status:</strong> {appointment.status}</p>
