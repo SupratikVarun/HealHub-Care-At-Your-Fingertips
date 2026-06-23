@@ -99,7 +99,7 @@ function DoctorDashboard() {
         <br />
 
         <div className="card">
-          <h3>Today's Appointments</h3>
+          <h3>Appointment Requests</h3>
           {error && <p className="form-error">{error}</p>}
           {appointments.length === 0 ? (
             <p>No appointments scheduled. <Link to="/doctors">Share your profile</Link> to attract patients.</p>
