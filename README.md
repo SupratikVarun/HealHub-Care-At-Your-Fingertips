@@ -225,7 +225,7 @@ This project strengthened my understanding of:
 📍 Hyderabad, India
 
 - GitHub: https://github.com/SupratikVarun
-- LinkedIn: *(Add your LinkedIn profile here)*
+- LinkedIn: www.linkedin.com/in/supratik-varun-050048322
 
 ---
 
