@@ -151,39 +151,89 @@ JWT_SECRET=your_secret_key
 
 # 📸 Application Screenshots
 
-## 🏠 Home Page
-
-![Home](screenshots/home-page.png)
+Below are screenshots showcasing the key features and workflows of **HealHub** from both the **Patient** and **Doctor** perspectives.
 
 ---
 
-## 👨‍⚕️ Doctor Dashboard
+# 🧑 Patient Module
 
-![Doctor Dashboard](screenshots/doctor-dashboard.png)
+### 🏠 Patient Home Page
 
----
-
-## 🧑 Patient Dashboard
-
-![Patient Dashboard](screenshots/patient-dashboard.png)
+![Patient Home](screenshots/PatientHome.png)
 
 ---
 
-## 👤 Doctor Profile
+### 👤 Patient Registration
 
-![Doctor Profile](screenshots/doctor-profile.png)
-
----
-
-## 📅 Appointment Booking
-
-![Appointment](screenshots/book-appointment.png)
+![Patient Registration](screenshots/PatientRegistration.png)
 
 ---
 
-## 📋 My Appointments
+### 🔐 Patient Login
 
-![Appointments](screenshots/my-appointments.png)
+![Patient Login](screenshots/Login%20page.png)
+
+---
+
+### 🔍 Search Doctors
+
+![Search Doctors](screenshots/Search.png)
+
+---
+
+### 👨‍⚕️ Available Doctors
+
+![Available Doctors](screenshots/DoctorsAvailable.png)
+
+---
+
+### 👨‍⚕️ Doctor Profile
+
+![Doctor Profile](screenshots/DocProfile.png)
+
+---
+
+### 📅 Book Appointment
+
+![Appointment Booking](screenshots/Appointment.png)
+
+---
+
+### 📋 My Appointments
+
+![My Appointments](screenshots/MyAppointments.png)
+
+---
+
+### 📊 Patient Dashboard
+
+![Patient Dashboard](screenshots/PatientDashboard.png)
+
+---
+
+# 👨‍⚕️ Doctor Module
+
+### 🏠 Doctor Home Page
+
+![Doctor Home](screenshots/DocHome.png)
+
+---
+
+### 📝 Doctor Registration
+
+![Doctor Registration](screenshots/DocRegistration.png)
+
+---
+
+### 📊 Doctor Dashboard
+
+![Doctor Dashboard](screenshots/DocDashboard.png)
+
+---
+
+### 🗓️ Manage Availability
+
+![Doctor Availability](screenshots/Availability.png)
 
 ---
 
