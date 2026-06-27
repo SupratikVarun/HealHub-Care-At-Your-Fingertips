@@ -1,108 +1,239 @@
-# HealHub - Care at Your Fingertips
+# 🏥 HealHub – Care At Your Fingertips
 
-HealHub is a full-stack healthcare booking application built with a React/Vite frontend and an Express/MongoDB backend. It supports patient and doctor registration, secure phone/password authentication, role-aware dashboards, and appointment management.
+A full-stack **MERN Healthcare Appointment Booking Platform** that connects patients with doctors through a secure and intuitive web application. HealHub simplifies appointment scheduling, doctor availability management, and patient healthcare access with a modern user experience.
 
-## Project Structure
+---
 
-- `backend/`
-  - `index.js` - Express application entry point
-  - `config/db.js` - MongoDB connection logic
-  - `controllers/` - Request handlers for auth, doctors, appointments
-  - `models/` - Mongoose schemas for User and related entities
-  - `routes/` - API route definitions
-  - `middleware/` - Auth, error handling, and CORS utilities
+## 🌟 Features
 
-- `frontend/`
-  - `src/` - React application source files
-  - `src/api.js` - API client helper
-  - `src/context/AuthContext.jsx` - Authentication state and helpers
-  - `src/pages/` - Login, registration, dashboard, and appointment pages
-  - `src/components/` - Shared UI components such as `Navbar`
+### 👨‍⚕️ Doctor Portal
+- 🔐 Secure Registration & Login
+- 📅 Manage Availability
+- 👥 Set Maximum Patients Per Time Slot
+- ✅ Accept / ❌ Reject Appointment Requests
+- 📋 View Patient Appointment History
+- 👤 Professional Doctor Profile
 
-## Features
+### 🧑‍🤝‍🧑 Patient Portal
+- 🔐 Secure Registration & Login
+- 🔍 Search Doctors by Name & Specialization
+- 👨‍⚕️ View Doctor Profiles
+- 📅 Book Appointments
+- 📌 Track Appointment Status
+- 📊 Personalized Dashboard
 
-- Patient and doctor registration with secure password hashing
-- Phone + password login
-- Role-based dashboard redirects for patients and doctors
-- Registration redirects to login after successful sign-up
-- Backend CORS configuration for frontend access
-- Environment-based API URL handling for local and deployed builds
+### 🔒 Authentication & Security
+- JWT Authentication
+- Password Encryption using bcrypt
+- Protected Routes
+- Role-Based Access Control
 
-## Local Development
+### 💾 Database
+- MongoDB Atlas Cloud Database
+- Real-Time Data Persistence
 
-### Backend
+### 🎨 User Interface
+- Responsive Design
+- Modern Healthcare Theme
+- Personalized Welcome Section
+- Health Tips
+- Clean Dashboard Layout
 
-1. Navigate to the backend folder:
-   ```bash
-   cd backend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Create a `.env` file based on `.env.example` and add:
-   ```env
-   MONGO_URI=<your mongo connection string>
-   JWT_SECRET=<your jwt secret>
-   CLIENT_SITE_URL=http://localhost:5173
-   ```
-4. Start the backend server:
-   ```bash
-   npm run dev
-   ```
+---
+
+# 🛠 Tech Stack
 
 ### Frontend
+- React.js
+- React Router DOM
+- JavaScript (ES6)
+- CSS3
 
-1. Navigate to the frontend folder:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the frontend dev server:
-   ```bash
-   npm run dev
-   ```
-4. Open the app in the browser:
-   ```
-   http://localhost:5173
-   ```
+### Backend
+- Node.js
+- Express.js
 
-## API Base URL
+### Database
+- MongoDB Atlas
+- Mongoose
 
-The frontend reads the backend URL from `VITE_API_BASE_URL`. If this variable is not set, it defaults to:
+### Authentication
+- JWT (JSON Web Tokens)
+- bcrypt.js
 
-```js
-http://localhost:5000/api
+### Development Tools
+- Git
+- GitHub
+- VS Code
+- Postman
+
+---
+
+# 📂 Project Structure
+
+```text
+HealHub/
+│
+├── backend/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── config/
+│   └── server.js
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   └── api.js
+│
+├── screenshots/
+│
+└── README.md
 ```
 
-Set `VITE_API_BASE_URL` in your deployment environment to point to the live backend.
+---
 
-## Deployment
+# 🚀 Key Functionalities
 
-### Backend (Render)
+- Doctor Registration
+- Patient Registration
+- Secure Login
+- Doctor Search
+- Doctor Profiles
+- Appointment Booking
+- Doctor Availability Management
+- Appointment Approval Workflow
+- MongoDB Atlas Integration
+- Responsive User Interface
 
-- Configure `MONGO_URI` with your MongoDB connection string
-- Configure `JWT_SECRET` with a secure secret
-- Configure `CLIENT_SITE_URL` to your deployed frontend URL
-- Deploy the backend with Node.js 18 or later
+---
 
-### Frontend (Vercel)
+# ⚙️ Installation
 
-- Set `VITE_API_BASE_URL` to the deployed backend API URL, for example:
-  ```env
-  VITE_API_BASE_URL=https://your-backend.onrender.com/api
-  ```
-- Deploy the frontend app as a Vite React project
+## Clone Repository
 
-## Notes
+```bash
+git clone https://github.com/SupratikVarun/HealHub-Care-At-Your-Fingertips.git
+```
 
-- The frontend and backend are separate applications and deploy independently.
-- Vite environment variables are applied at build time.
-- CORS must allow the frontend origin to access backend APIs.
+## Backend
 
-## License
+```bash
+cd backend
+npm install
+npm run dev
+```
 
-This project is open for customization and learning.
+## Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+# 🌍 Environment Variables
+
+Create a `.env` file inside the backend folder.
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
+
+---
+
+# 📸 Application Screenshots
+
+## 🏠 Home Page
+
+![Home](screenshots/home-page.png)
+
+---
+
+## 👨‍⚕️ Doctor Dashboard
+
+![Doctor Dashboard](screenshots/doctor-dashboard.png)
+
+---
+
+## 🧑 Patient Dashboard
+
+![Patient Dashboard](screenshots/patient-dashboard.png)
+
+---
+
+## 👤 Doctor Profile
+
+![Doctor Profile](screenshots/doctor-profile.png)
+
+---
+
+## 📅 Appointment Booking
+
+![Appointment](screenshots/book-appointment.png)
+
+---
+
+## 📋 My Appointments
+
+![Appointments](screenshots/my-appointments.png)
+
+---
+
+# 🔮 Future Enhancements
+
+- 🎥 Video Consultation
+- 📞 Voice Calling
+- 💬 Real-Time Chat
+- 🤖 AI Health Assistant
+- 📄 Digital Prescriptions
+- 💳 Online Payments
+- ⭐ Doctor Ratings & Reviews
+- 🔔 Email & SMS Notifications
+- 📊 Admin Analytics Dashboard
+
+---
+
+# 🎯 Learning Outcomes
+
+This project strengthened my understanding of:
+
+- MERN Stack Development
+- RESTful API Design
+- JWT Authentication
+- Role-Based Authorization
+- MongoDB Atlas Integration
+- State Management in React
+- Full-Stack Application Development
+- Secure User Authentication
+- Git & GitHub Workflow
+
+---
+
+# 👨‍💻 Developer
+
+**B. Supratik Varun Reddy**
+
+🎓 B.Tech – Information Technology  
+📍 Hyderabad, India
+
+- GitHub: https://github.com/SupratikVarun
+- LinkedIn: *(Add your LinkedIn profile here)*
+
+---
+
+# ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub!
+
+---
+
+> **HealHub – Care At Your Fingertips**  
+> Making healthcare appointments simple, secure, and accessible.
