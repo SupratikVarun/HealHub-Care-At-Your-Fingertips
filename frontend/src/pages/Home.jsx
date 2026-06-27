@@ -3,7 +3,8 @@ import Hero from "../components/Hero";
 import SearchDoctor from "../components/SearchDoctor";
 import Specializations from "../components/Specializations";
 import HowItWorks from "../components/HowItWorks";
-import Testimonials from "../components/Testimonials";
+import Statistics from "../components/Statistics";
+import HealthTips from "../components/HealthTips";
 import Footer from "../components/Footer";
 
 function Home() {
@@ -14,7 +15,7 @@ function Home() {
       <SearchDoctor />
       <Specializations />
       <HowItWorks />
-      <Testimonials />
+      <HealthTips />
       <Footer />
     </>
   );

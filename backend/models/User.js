@@ -32,8 +32,28 @@ const userSchema = mongoose.Schema(
     experience: Number,
     clinic: String,
     licenseNumber: String,
-  },
+
+availability: [
   {
+    date: {
+      type: String,
+    },
+    time: {
+      type: String,
+    },
+    maxAppointments: {
+      type: Number,
+      default: 1,
+    },
+    bookedCount: {
+      type: Number,
+      default: 0,
+    },
+  },
+],
+  },
+
+{
     timestamps: true,
   }
 );

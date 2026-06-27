@@ -9,6 +9,10 @@ function DoctorDashboard() {
   const [appointments, setAppointments] = useState([]);
   const [error, setError] = useState("");
   const [responseMessages, setResponseMessages] = useState({});
+  const [availabilityDate, setAvailabilityDate] = useState("");
+  const [availabilityTime, setAvailabilityTime] = useState("");
+  const [availabilityMessage, setAvailabilityMessage] = useState("");
+  const [maxAppointments, setMaxAppointments] = useState(1);
 
   useEffect(() => {
     if (!user) {
@@ -81,6 +85,52 @@ function DoctorDashboard() {
       setError(err.message || 'Unable to update appointment status.');
     }
   };
+  const handleAddAvailability = async (event) => {
+  event.preventDefault();
+  const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+const selectedDate = new Date(availabilityDate);
+
+if (selectedDate < today) {
+  setAvailabilityMessage(
+    "You cannot add availability for a past date."
+  );
+  return;
+}
+
+  setAvailabilityMessage("");
+  setError("");
+
+  if (!availabilityDate || !availabilityTime) {
+    setAvailabilityMessage("Please select both date and time.");
+    return;
+  }
+
+  try {
+    const data = await api.post(
+      "/doctors/availability",
+      {
+        date: availabilityDate,
+        time: availabilityTime,
+        maxAppointments,
+      },
+      token
+    );
+
+    setAvailabilityMessage(
+      data.message || "Availability added successfully."
+    );
+
+    setAvailabilityDate("");
+    setAvailabilityTime("");
+    setMaxAppointments(1);
+  } catch (err) {
+    setAvailabilityMessage(
+      err.message || "Unable to add availability."
+    );
+  }
+};
 
   return (
     <>
@@ -98,6 +148,44 @@ function DoctorDashboard() {
 
         <br />
 
+<div className="card">
+  <h3>Add Availability</h3>
+  <p>Select the date and time when you are available for appointments.</p>
+
+  {availabilityMessage && (
+    <p className="form-error">{availabilityMessage}</p>
+  )}
+
+  <form onSubmit={handleAddAvailability}>
+    <input
+  type="date"
+  min={new Date().toISOString().split("T")[0]}
+  value={availabilityDate}
+  onChange={(event) => setAvailabilityDate(event.target.value)}
+/>
+
+<input
+  type="time"
+  value={availabilityTime}
+  onChange={(event) => setAvailabilityTime(event.target.value)}
+/>
+
+    <input
+  type="number"
+  min="1"
+  placeholder="Maximum appointments for this slot"
+  value={maxAppointments}
+  onChange={(event) => setMaxAppointments(event.target.value)}
+/>
+
+    <button type="submit" className="doctor-btn">
+      Add Availability
+    </button>
+  </form>
+</div>
+
+        <br />
+
         <div className="card">
           <h3>Appointment Requests</h3>
           {error && <p className="form-error">{error}</p>}
@@ -109,7 +197,21 @@ function DoctorDashboard() {
                 <p><strong>Patient:</strong> {appointment.patient?.name || appointment.patient?.phone || 'Unknown'}</p>
                 <p><strong>Date:</strong> {new Date(appointment.date).toLocaleDateString()}</p>
                 <p><strong>Time:</strong> {appointment.time}</p>
-                <p><strong>Status:</strong> {appointment.status}</p>
+                <p>
+  <strong>Status:</strong>{" "}
+  <span
+    className={
+      appointment.status === "confirmed"
+        ? "status-confirmed"
+        : appointment.status === "declined"
+        ? "status-declined"
+        : "status-pending"
+    }
+  >
+    {appointment.status.charAt(0).toUpperCase() +
+      appointment.status.slice(1)}
+  </span>
+</p>
                 <p><strong>Reason:</strong> {appointment.reason || 'N/A'}</p>
                 {appointment.status === 'pending' ? (
                   <>

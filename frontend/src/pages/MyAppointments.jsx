@@ -69,7 +69,21 @@ function MyAppointments() {
                 <p><strong>Specialization:</strong> {appointment.doctor?.specialization || 'N/A'}</p>
                 <p><strong>Date:</strong> {new Date(appointment.date).toLocaleDateString()}</p>
                 <p><strong>Time:</strong> {appointment.time}</p>
-                <p><strong>Status:</strong> {appointment.status}</p>
+                <p>
+  <strong>Status:</strong>{" "}
+  <span
+    className={
+      appointment.status === "confirmed"
+        ? "status-confirmed"
+        : appointment.status === "declined"
+        ? "status-declined"
+        : "status-pending"
+    }
+  >
+    {appointment.status.charAt(0).toUpperCase() +
+      appointment.status.slice(1)}
+  </span>
+</p>
                 {appointment.responseMessage && (
                   <p><strong>Doctor Response:</strong> {appointment.responseMessage}</p>
                 )}

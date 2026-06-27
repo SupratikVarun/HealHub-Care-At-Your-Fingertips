@@ -37,6 +37,20 @@ const sampleDoctors = [
     location: 'Hyderabad',
   },
 ];
+const formatTime = (time) => {
+
+  const [hour, minute] = time.split(":");
+
+  let h = parseInt(hour);
+
+  const ampm = h >= 12 ? "PM" : "AM";
+
+  h = h % 12;
+
+  if (h === 0) h = 12;
+
+  return `${h}:${minute} ${ampm}`;
+};
 
 function Doctors() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -107,7 +121,15 @@ function Doctors() {
       : true;
     return matchesName && matchesSpecialization;
   });
-  const doctorList = isUsingBackend ? doctors : filteredSampleDoctors;
+  const doctorList = isUsingBackend
+  ? doctors.filter(
+      (doctor) =>
+        doctor.availability &&
+        doctor.availability.some(
+          (slot) => slot.bookedCount < slot.maxAppointments
+        )
+    )
+  : filteredSampleDoctors;
 
   return (
     <>
@@ -153,31 +175,86 @@ function Doctors() {
             <div className="card" key={doctor._id}>
               <h3>{doctor.name}</h3>
 
-              <p>
-                <strong>Specialization:</strong> {doctor.specialization}
-              </p>
+             <p>{doctor.specialization}</p>
 
-              <p>
-                <strong>Experience:</strong> {doctor.experience}
-              </p>
+               <p>{doctor.location || doctor.city || "Hyderabad"}</p>
 
-              <p>
-                <strong>Rating:</strong> ⭐ {doctor.rating}
-              </p>
+                 <p>
+                    Rating: {doctor.rating || "4.8"}/5
+                 </p>
+                 <Link to={`/doctor/${doctor._id}`}>
+                <button className="doctor-btn secondary">
+                  View Profile
+               </button>
+            </Link>
 
-              <p>
-                <strong>Location:</strong> {doctor.location || doctor.city || 'Unknown'}
-              </p>
+        <hr />
 
-              {isUsingBackend ? (
-                <Link to={`/appointment?doctorId=${doctor._id}`}>
-                  <button className="doctor-btn">Book Appointment</button>
-                </Link>
-              ) : (
-                <button className="doctor-btn" disabled>
-                  Login to book
-                </button>
-              )}
+                <hr />
+
+              {doctor.availability && doctor.availability.length > 0 && (
+  <div className="availability-preview">
+
+    <p><strong>Available Appointments</strong></p>
+
+    {doctor.availability.map((slot, index) => {
+
+      const remaining =
+        slot.maxAppointments - slot.bookedCount;
+
+      let symbol = "🟢";
+
+      if (remaining === 2) symbol = "🟡";
+      if (remaining === 1) symbol = "🟠";
+
+      return (
+        <p key={index}>
+          {symbol} {formatTime(slot.time)} &nbsp;&nbsp;
+
+          {remaining === 1
+            ? "Last slot"
+            : `${remaining} slots left`}
+        </p>
+      );
+    })}
+
+  </div>
+)}
+
+             <div className="availability-box">
+  <strong>Available Slots:</strong>
+
+  {doctor.availability &&
+  doctor.availability.filter(
+    (slot) => slot.bookedCount < slot.maxAppointments
+  ).length > 0 ? (
+
+    doctor.availability
+      .filter(
+        (slot) => slot.bookedCount < slot.maxAppointments
+      )
+      .map((slot, index) => (
+        <div key={index} className="slot-item">
+
+          <span className="slot-badge">
+            {slot.date} • {formatTime(slot.time)}
+          </span>
+
+          <Link
+            to={`/appointment?doctorId=${doctor._id}&date=${slot.date}&time=${slot.time}`}
+          >
+            <button className="doctor-btn">
+              Book Appointment
+            </button>
+          </Link>
+
+        </div>
+      ))
+
+  ) : (
+    <p>No slots available</p>
+  )}
+</div>
             </div>
           ))}
         </div>

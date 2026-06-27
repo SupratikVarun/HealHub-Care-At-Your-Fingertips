@@ -1,24 +1,37 @@
 function HowItWorks() {
   return (
-    <section className="section light">
-      <h2>How It Works</h2>
+    <section className="section">
+
+      <h2>Why Choose HealHub?</h2>
 
       <div className="cards">
+
         <div className="card">
-          <h3>1. Search</h3>
-          <p>Find doctors by name, location, or specialization.</p>
+          <h3>🩺 Verified Doctors</h3>
+          <p>
+            Connect with experienced and verified healthcare professionals
+            across multiple specializations.
+          </p>
         </div>
 
         <div className="card">
-          <h3>2. Book</h3>
-          <p>Select a suitable time slot and book instantly.</p>
+          <h3>⚡ Instant Booking</h3>
+          <p>
+            Book appointments in just a few clicks with real-time doctor
+            availability.
+          </p>
         </div>
 
         <div className="card">
-          <h3>3. Get Care</h3>
-          <p>Visit your doctor and manage your appointment history.</p>
+          <h3>🔒 Secure & Reliable</h3>
+          <p>
+            Your appointment details remain safe while providing a smooth
+            healthcare experience.
+          </p>
         </div>
+
       </div>
+
     </section>
   );
 }

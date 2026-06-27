@@ -1,10 +1,35 @@
 import Appointment from '../models/Appointment.js';
+import User from '../models/User.js';
 
 export const createAppointment = async (req, res) => {
   const { doctorId, date, time, reason } = req.body;
 
   if (!doctorId || !date || !time) {
-    return res.status(400).json({ message: 'Doctor, date, and time are required to book an appointment' });
+    return res.status(400).json({
+      message: 'Doctor, date, and time are required to book an appointment',
+    });
+  }
+
+  const doctor = await User.findById(doctorId);
+
+  if (!doctor || doctor.role !== 'doctor') {
+    return res.status(404).json({ message: 'Doctor not found' });
+  }
+
+  const slot = doctor.availability.find(
+    (item) => item.date === date && item.time === time
+  );
+
+  if (!slot) {
+    return res.status(400).json({
+      message: 'Selected slot is not available',
+    });
+  }
+
+  if (slot.bookedCount >= slot.maxAppointments) {
+    return res.status(400).json({
+      message: 'This slot is fully booked',
+    });
   }
 
   const appointment = await Appointment.create({
@@ -15,7 +40,15 @@ export const createAppointment = async (req, res) => {
     reason,
   });
 
-  return res.status(201).json(appointment);
+  slot.bookedCount += 1;
+  await doctor.save();
+
+  const populatedAppointment = await appointment.populate([
+    { path: 'patient', select: 'name phone' },
+    { path: 'doctor', select: 'name specialization city clinic' },
+  ]);
+
+  return res.status(201).json(populatedAppointment);
 };
 
 export const getAppointments = async (req, res) => {
@@ -65,8 +98,13 @@ export const updateAppointmentStatus = async (req, res) => {
   }
 
   appointment.status = status;
-  appointment.responseMessage = responseMessage || appointment.responseMessage;
-  await appointment.save();
+appointment.responseMessage = responseMessage || appointment.responseMessage;
 
-  return res.json(appointment);
+await appointment.save();
+
+const updatedAppointment = await Appointment.findById(appointment._id)
+  .populate("patient", "name phone city")
+  .populate("doctor", "name specialization clinic");
+
+return res.json(updatedAppointment);
 };

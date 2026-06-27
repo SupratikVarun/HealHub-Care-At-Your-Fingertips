@@ -4,6 +4,20 @@ import Navbar from "../components/Navbar";
 import { api } from "../api";
 import { useAuth } from "../context/AuthContext";
 
+const formatTime = (time) => {
+  const [hour, minute] = time.split(":");
+
+  let h = parseInt(hour);
+
+  const ampm = h >= 12 ? "PM" : "AM";
+
+  h = h % 12;
+
+  if (h === 0) h = 12;
+
+  return `${h}:${minute} ${ampm}`;
+};
+
 function Appointment() {
   const { user, token } = useAuth();
   const navigate = useNavigate();
@@ -23,7 +37,18 @@ function Appointment() {
         const data = await api.get('/doctors');
         setDoctors(data || []);
         const doctorId = searchParams.get('doctorId');
-        setSelectedDoctor(doctorId || (data?.[0]?._id) || '');
+const selectedDate = searchParams.get('date');
+const selectedTime = searchParams.get('time');
+
+setSelectedDoctor(doctorId || (data?.[0]?._id) || '');
+
+if (selectedDate) {
+  setDate(selectedDate);
+}
+
+if (selectedTime) {
+  setTime(selectedTime);
+}
       } catch (err) {
         setError('Unable to load doctors from backend.');
       } finally {
@@ -97,36 +122,22 @@ function Appointment() {
           <form onSubmit={handleSubmit}>
             <p><strong>Patient:</strong> {user.name} ({user.phone})</p>
 
-            <label>
-              Select Doctor
-              <select
-                value={selectedDoctor}
-                onChange={(event) => setSelectedDoctor(event.target.value)}
-                required
-              >
-                <option value="">Select Doctor</option>
-                {doctors.map((doctor) => (
-                  <option key={doctor._id} value={doctor._id}>
-                    {doctor.name} - {doctor.specialization}
-                  </option>
-                ))}
-              </select>
-            </label>
+            <div className="appointment-summary">
 
-            <input
-              type="date"
-              value={date}
-              onChange={(event) => setDate(event.target.value)}
-              required
-            />
+  <p>
+    <strong>Doctor:</strong>{" "}
+    {doctors.find((doctor) => doctor._id === selectedDoctor)?.name}
+  </p>
 
-            <select value={time} onChange={(event) => setTime(event.target.value)} required>
-              <option value="">Select Time Slot</option>
-              <option value="10:00 AM">10:00 AM</option>
-              <option value="11:30 AM">11:30 AM</option>
-              <option value="02:00 PM">02:00 PM</option>
-              <option value="04:30 PM">04:30 PM</option>
-            </select>
+  <p>
+    <strong>Date:</strong> {date}
+  </p>
+
+  <p>
+    <strong>Time:</strong> {formatTime(time)}
+  </p>
+
+</div>
 
             <textarea
               value={reason}

@@ -4,11 +4,12 @@ import Login from "./pages/Login";
 import PatientRegister from "./pages/PatientRegister";
 import DoctorRegister from "./pages/DoctorRegister";
 import Doctors from "./pages/Doctors";
-import Appointment from "./pages/Appointment";
+import Appointment from "./pages/BookAppointment";
 import PatientDashboard from "./pages/PatientDashboard";
 import DoctorDashboard from "./pages/DoctorDashboard";
 import MyAppointments from "./pages/MyAppointments";
 import AdminDashboard from "./pages/AdminDashboard";
+import DoctorProfile from "./pages/DoctorProfile";
 import "./App.css";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/register-patient" element={<PatientRegister />} />
         <Route path="/register-doctor" element={<DoctorRegister />} />
         <Route path="/doctors" element={<Doctors />} />
+        <Route path="/doctor/:id" element={<DoctorProfile />} />
         <Route path="/appointment" element={<Appointment />} />
         <Route path="/patient-dashboard" element={<PatientDashboard />} />
         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />

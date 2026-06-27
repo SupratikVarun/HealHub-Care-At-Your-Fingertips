@@ -71,10 +71,11 @@ body {
 }
 
 .hero h1 {
-  font-size: 52px;
-  line-height: 1.1;
+  font-size: 44px;
+  line-height: 1.2;
   color: #0f172a;
   margin-bottom: 20px;
+  max-width: 800px;
 }
 
 .hero p {
@@ -159,11 +160,17 @@ body {
 }
 
 .card {
-  background-color: white;
+  background: #f0f7ff;
   padding: 28px;
-  border-radius: 16px;
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(15, 139, 255, 0.12);
   text-align: center;
+  border: 1px solid #dbeafe;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
 }
 
 .card h3 {
@@ -319,14 +326,15 @@ body {
 }
 
 .doctor-btn {
-  margin-top: 15px;
-  background-color: #0f8bff;
+  margin-top: 10px;
+  background-color: #2563eb;
   color: white;
   border: none;
   padding: 12px 18px;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: 600;
+  width: 100%;
 }
 
 .logo-container {
@@ -339,4 +347,103 @@ body {
   width: 165px;
   height: auto;
   object-fit: contain;
+}
+
+.availability-box {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.slot-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.slot-badge {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.availability-preview {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 12px 0;
+}
+
+.slot-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.slot-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.appointment-summary {
+  background: #e7f4ff;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.appointment-summary p {
+  margin: 8px 0;
+  color: #0f172a;
+}
+
+.card p{
+    margin:12px 0;
+    font-size:16px;
+    line-height:1.6;
+}
+
+.card h2{
+    color:#0f8bff;
+    margin-bottom:20px;
+}
+
+.card hr{
+    margin:25px 0;
+}
+
+.status-confirmed {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.status-pending {
+  background: #fef9c3;
+  color: #ca8a04;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.status-declined {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.welcome-name {
+  font-size: 34px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 20px;
 }
