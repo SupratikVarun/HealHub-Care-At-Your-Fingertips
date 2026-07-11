@@ -98,3 +98,37 @@ export const getDoctorAvailability = async (req, res) => {
 
   return res.json(doctor.availability || []);
 };
+
+export const updateConsultationFee = async (req, res) => {
+  try {
+    const { consultationFee } = req.body;
+
+    if (!consultationFee || consultationFee < 100) {
+      return res.status(400).json({
+        message: "Please enter a valid consultation fee."
+      });
+    }
+
+    const doctor = await User.findById(req.user._id);
+
+    if (!doctor || doctor.role !== "doctor") {
+      return res.status(404).json({
+        message: "Doctor not found."
+      });
+    }
+
+    doctor.consultationFee = consultationFee;
+
+    await doctor.save();
+
+    res.json({
+      message: "Consultation fee updated successfully.",
+      consultationFee: doctor.consultationFee
+    });
+
+  } catch (error) {
+    res.status(500).json({
+      message: error.message
+    });
+  }
+};

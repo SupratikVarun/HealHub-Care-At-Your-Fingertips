@@ -13,24 +13,30 @@ function DoctorDashboard() {
   const [availabilityTime, setAvailabilityTime] = useState("");
   const [availabilityMessage, setAvailabilityMessage] = useState("");
   const [maxAppointments, setMaxAppointments] = useState(1);
+  const [consultationFee, setConsultationFee] = useState(
+  user?.consultationFee || 500
+);
+
+const [feeMessage, setFeeMessage] = useState("");
 
   useEffect(() => {
-    if (!user) {
-      return;
+  if (user) {
+    setConsultationFee(user.consultationFee || 500);
+  }
+
+  const loadAppointments = async () => {
+    try {
+      const data = await api.get("/appointments", token);
+      setAppointments(data || []);
+    } catch (err) {
+      setError("Unable to load your appointments.");
     }
+  };
 
-    const loadAppointments = async () => {
-      try {
-        const data = await api.get('/appointments', token);
-        setAppointments(data || []);
-      } catch (err) {
-        setError('Unable to load your appointments.');
-      }
-    };
-
+  if (user) {
     loadAppointments();
-  }, [user, token]);
-
+  }
+}, [user, token]);
   if (loading) {
     return (
       <>
@@ -132,6 +138,29 @@ if (selectedDate < today) {
   }
 };
 
+const handleUpdateFee = async () => {
+  setFeeMessage("");
+
+  try {
+    const data = await api.put(
+      "/doctors/consultation-fee",
+      {
+        consultationFee: Number(consultationFee),
+      },
+      token
+    );
+
+    setConsultationFee(data.consultationFee);
+
+    setFeeMessage(data.message);
+
+  } catch (err) {
+    setFeeMessage(
+      err.message || "Unable to update consultation fee."
+    );
+  }
+};
+
   return (
     <>
       <Navbar />
@@ -143,7 +172,36 @@ if (selectedDate < today) {
           <h3>Doctor Information</h3>
           <p><strong>Name:</strong> {user.name}</p>
           <p><strong>Specialization:</strong> {user.specialization || 'Not provided'}</p>
-          <p><strong>Experience:</strong> {user.experience ? `${user.experience} Years` : 'Not provided'}</p>
+         <p>
+  <strong>Experience:</strong>{" "}
+  {user.experience ? `${user.experience} Years` : "Not provided"}
+</p>
+
+<p>
+  <strong>Consultation Fee:</strong> ₹{consultationFee}
+</p>
+
+<br />
+
+<input
+  type="number"
+  min="100"
+  value={consultationFee}
+  onChange={(e) => setConsultationFee(e.target.value)}
+/>
+
+<button
+  className="doctor-btn"
+  onClick={handleUpdateFee}
+>
+  Update Fee
+</button>
+
+{feeMessage && (
+  <p className="success-message">
+    {feeMessage}
+  </p>
+)}
         </div>
 
         <br />

@@ -31,10 +31,19 @@ function Appointment() {
   const [loading, setLoading] = useState(true);
   const [success, setSuccess] = useState("");
 
+  const selectedDoctorData = doctors.find(
+  (doctor) => doctor._id === selectedDoctor
+);
+
+const consultationFee = selectedDoctorData?.consultationFee || 0;
+const platformFee = 0;
+const totalAmount = consultationFee + platformFee;
+
   useEffect(() => {
     const loadDoctors = async () => {
       try {
         const data = await api.get('/doctors');
+        console.log(data);
         setDoctors(data || []);
         const doctorId = searchParams.get('doctorId');
 const selectedDate = searchParams.get('date');
@@ -69,10 +78,17 @@ if (selectedTime) {
       return;
     }
 
-    if (user.role !== 'patient') {
-      setError('Only patients can book appointments from this page.');
-      return;
-    }
+    if (user.role !== "patient") {
+  return (
+    <>
+      <Navbar />
+      <div className="section">
+        <h2>Access Denied</h2>
+        <p>Only patients can book appointments.</p>
+      </div>
+    </>
+  );
+}
 
     if (!selectedDoctor || !date || !time) {
       setError('Please choose a doctor, date, and time.');
@@ -122,11 +138,17 @@ if (selectedTime) {
           <form onSubmit={handleSubmit}>
             <p><strong>Patient:</strong> {user.name} ({user.phone})</p>
 
-            <div className="appointment-summary">
+           <div className="appointment-summary">
+
+  <h3>Booking Summary</h3>
 
   <p>
-    <strong>Doctor:</strong>{" "}
-    {doctors.find((doctor) => doctor._id === selectedDoctor)?.name}
+    <strong>Doctor:</strong> {selectedDoctorData?.name}
+  </p>
+
+  <p>
+    <strong>Specialization:</strong>{" "}
+    {selectedDoctorData?.specialization}
   </p>
 
   <p>
@@ -137,6 +159,18 @@ if (selectedTime) {
     <strong>Time:</strong> {formatTime(time)}
   </p>
 
+  <hr />
+
+  <p>
+    <strong>Consultation Fee:</strong> ₹{consultationFee}
+  </p>
+
+  <p>
+    <strong>Platform Fee:</strong> ₹{platformFee}
+  </p>
+
+  <h3>Total Amount: ₹{totalAmount}</h3>
+
 </div>
 
             <textarea
@@ -145,7 +179,9 @@ if (selectedTime) {
               placeholder="Reason for visit (optional)"
             />
 
-            <button type="submit">Confirm Appointment</button>
+            <button type="submit">
+  Proceed to Payment
+</button>
           </form>
 
           {error && <p className="form-error">{error}</p>}

@@ -86,6 +86,8 @@ function DoctorProfile() {
             <p><strong>License Number:</strong> {doctor.licenseNumber || "Not Provided"}
           </p>
 
+          <p><strong>Consultation Fee:</strong> ₹{doctor.consultationFee}</p>
+
           
             <p><strong>City:</strong> {doctor.city || "Not Provided"}
           </p>
@@ -116,13 +118,15 @@ doctor.availability.filter(
          🕒 {formatTime(slot.time)}
            </span>
 
-        <Link
-          to={`/appointment?doctorId=${doctor._id}&date=${slot.date}&time=${slot.time}`}
-        >
-          <button className="doctor-btn">
-            Book Appointment
-          </button>
-        </Link>
+        {user?.role === "patient" && (
+  <Link
+    to={`/appointment?doctorId=${doctor._id}&date=${slot.date}&time=${slot.time}`}
+  >
+    <button className="doctor-btn">
+      Book Appointment
+    </button>
+  </Link>
+)}
 
       </div>
 

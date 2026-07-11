@@ -33,6 +33,11 @@ const userSchema = mongoose.Schema(
     clinic: String,
     licenseNumber: String,
 
+    consultationFee: {
+    type: Number,
+    default: 500
+},
+
 availability: [
   {
     date: {

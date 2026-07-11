@@ -1,18 +1,26 @@
-import express from 'express';
+import express from "express";
 import {
   getDoctors,
   getDoctorById,
   addAvailability,
   getDoctorAvailability,
-} from '../controllers/doctorController.js';
-import { protect } from '../middleware/authMiddleware.js';
+  updateConsultationFee,
+} from "../controllers/doctorController.js";
+
+import { protect } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-router.get('/', getDoctors);
+router.get("/", getDoctors);
+
 router.get("/:id", getDoctorById);
 
-router.post('/availability', protect, addAvailability);
-router.get('/:id/availability', getDoctorAvailability);
+// Update consultation fee
+router.put("/consultation-fee", protect, updateConsultationFee);
+
+// Doctor availability
+router.post("/availability", protect, addAvailability);
+
+router.get("/:id/availability", getDoctorAvailability);
 
 export default router;

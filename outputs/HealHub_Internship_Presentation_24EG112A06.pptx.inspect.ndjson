@@ -1,0 +1,439 @@
+{"kind":"deck","id":"pr/gb44qb","name":"Deck"}
+{"kind":"layout","layoutId":"6eb42ec8-8100-40f6-b88d-28427d603d99","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"4921073f-376c-43b6-9cbf-be06fad5e68c","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/xc1v22","slide":1,"title":"HealHub","textShapes":8}
+{"kind":"textbox","id":"sh/bq1oryts","slide":1,"text":"HealHub","textPreview":"HealHub","textChars":7,"textLines":1,"bbox":[72,102,650,70]}
+{"kind":"textbox","id":"sh/m58z25kb","slide":1,"text":"Care At Your Fingertips","textPreview":"Care At Your Fingertips","textChars":23,"textLines":1,"bbox":[74,172,650,54]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":1,"text":"Full Stack Healthcare Appointment Booking Platform","textPreview":"Full Stack Healthcare Appointment Booking Platform","textChars":50,"textLines":1,"bbox":[78,244,620,34]}
+{"kind":"shape","id":"sh/4nap4r65","slide":1,"bbox":[78,300,270,5]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":1,"text":"Internship at Smart Bridge Educational Services Pvt. Ltd.","textPreview":"Internship at Smart Bridge Educational Services Pvt. Ltd.","textChars":57,"textLines":1,"bbox":[78,330,620,30]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":1,"text":"Presented by B. Supratik Varun Reddy\nRoll No.: 24EG112A06\nB.Tech Information Technology\nAnurag University","textPreview":"Presented by B. Supratik Varun Reddy | Roll No.: 24EG112A06 | B.Tech Information Technology | Anurag University","textChars":105,"textLines":4,"bbox":[78,400,600,128]}
+{"kind":"shape","id":"sh/tgfmlkjm","slide":1,"bbox":[78,560,150,34]}
+{"kind":"textbox","id":"sh/4vmtwra5","slide":1,"text":"MERN Stack","textPreview":"MERN Stack","textChars":10,"textLines":1,"bbox":[90,567,126,22]}
+{"kind":"shape","id":"sh/i5sneloj","slide":1,"bbox":[248,560,130,34]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":1,"text":"JWT Auth","textPreview":"JWT Auth","textChars":8,"textLines":1,"bbox":[260,567,106,22]}
+{"kind":"shape","id":"sh/0bi9s36h","slide":1,"bbox":[398,560,170,34]}
+{"kind":"textbox","id":"sh/pwb2hwfy","slide":1,"text":"Cloud Deployed","textPreview":"Cloud Deployed","textChars":14,"textLines":1,"bbox":[410,567,146,22]}
+{"kind":"image","id":"im/5kb6xkf6","slide":1,"name":"","alt":"Healthcare illustration","bbox":[710,80,480,520]}
+{"kind":"notes","id":"nt/xc1v22","slide":1,"text":"Introduce yourself and the internship context. Emphasize that HealHub is a full-stack healthcare appointment booking system built to connect patients and doctors through a secure digital workflow."}
+{"kind":"slide","id":"sl/0jeyu6","slide":2,"title":"ROADMAP","textShapes":31}
+{"kind":"shape","id":"sh/rytsvu9k","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/gfmlkjm1","slide":2,"bbox":[0,0,1280,18]}
+{"kind":"shape","id":"sh/90je9cvi","slide":2,"bbox":[0,702,1280,18]}
+{"kind":"textbox","id":"sh/y1kre1w7","slide":2,"text":"ROADMAP","textPreview":"ROADMAP","textChars":7,"textLines":1,"bbox":[72,38,740,30]}
+{"kind":"textbox","id":"sh/rmhk3q5o","slide":2,"text":"Agenda / Presentation Overview","textPreview":"Agenda / Presentation Overview","textChars":30,"textLines":1,"bbox":[72,72,860,58]}
+{"kind":"shape","id":"sh/g7adsji5","slide":2,"bbox":[72,138,180,4]}
+{"kind":"shape","id":"sh/9s36hcrm","slide":2,"bbox":[112,174,480,42]}
+{"kind":"textbox","id":"sh/yxobm58z","slide":2,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[128,183,42,22]}
+{"kind":"textbox","id":"sh/nih4byhg","slide":2,"text":"Organization Profile","textPreview":"Organization Profile","textChars":20,"textLines":1,"bbox":[178,182,370,24]}
+{"kind":"shape","id":"sh/72x4nap4","slide":2,"bbox":[112,236,480,42]}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[128,245,42,22]}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":2,"text":"Internship Objectives","textPreview":"Internship Objectives","textChars":21,"textLines":1,"bbox":[178,244,370,24]}
+{"kind":"shape","id":"sh/0nuxc3yl","slide":2,"bbox":[112,298,480,42]}
+{"kind":"textbox","id":"sh/7ed8bat4","slide":2,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[128,307,42,22]}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":2,"text":"Problem Statement","textPreview":"Problem Statement","textChars":17,"textLines":1,"bbox":[178,306,370,24]}
+{"kind":"shape","id":"sh/pkzupwb2","slide":2,"bbox":[112,360,480,42]}
+{"kind":"textbox","id":"sh/0z61032l","slide":2,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[128,369,42,22]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":2,"text":"Technology Stack","textPreview":"Technology Stack","textChars":16,"textLines":1,"bbox":[178,368,370,24]}
+{"kind":"shape","id":"sh/i5sneloj","slide":2,"bbox":[112,422,480,42]}
+{"kind":"textbox","id":"sh/m94fu18j","slide":2,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[128,431,42,22]}
+{"kind":"textbox","id":"sh/fu18jqh0","slide":2,"text":"System Architecture","textPreview":"System Architecture","textChars":19,"textLines":1,"bbox":[178,430,370,24]}
+{"kind":"shape","id":"sh/4fu18jqh","slide":2,"bbox":[112,484,480,42]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":2,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[128,493,42,22]}
+{"kind":"textbox","id":"sh/qxs72x4n","slide":2,"text":"Database Design","textPreview":"Database Design","textChars":15,"textLines":1,"bbox":[178,492,370,24]}
+{"kind":"shape","id":"sh/fil0rqd4","slide":2,"bbox":[112,546,480,42]}
+{"kind":"textbox","id":"sh/83itgfml","slide":2,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[128,555,42,22]}
+{"kind":"textbox","id":"sh/xobm58z2","slide":2,"text":"Key Features","textPreview":"Key Features","textChars":12,"textLines":1,"bbox":[178,554,370,24]}
+{"kind":"shape","id":"sh/mtwra5gb","slide":2,"bbox":[667,174,480,42]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":2,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[683,183,42,22]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":2,"text":"REST API Overview","textPreview":"REST API Overview","textChars":17,"textLines":1,"bbox":[733,182,370,24]}
+{"kind":"shape","id":"sh/cvixczed","slide":2,"bbox":[667,236,480,42]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":2,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[683,245,42,22]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":2,"text":"Application Screenshots","textPreview":"Application Screenshots","textChars":23,"textLines":1,"bbox":[733,244,370,24]}
+{"kind":"shape","id":"sh/54zidony","slide":2,"bbox":[667,298,480,42]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":2,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[683,307,42,22]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":2,"text":"Challenges & Solutions","textPreview":"Challenges & Solutions","textChars":22,"textLines":1,"bbox":[733,306,370,24]}
+{"kind":"shape","id":"sh/udg7adsj","slide":2,"bbox":[667,360,480,42]}
+{"kind":"textbox","id":"sh/1032lszq","slide":2,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[683,369,42,22]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":2,"text":"Learning Outcomes","textPreview":"Learning Outcomes","textChars":17,"textLines":1,"bbox":[733,368,370,24]}
+{"kind":"shape","id":"sh/g7adsji5","slide":2,"bbox":[667,422,480,42]}
+{"kind":"textbox","id":"sh/9s36hcrm","slide":2,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[683,431,42,22]}
+{"kind":"textbox","id":"sh/y1kre1w7","slide":2,"text":"Deployment","textPreview":"Deployment","textChars":10,"textLines":1,"bbox":[733,430,370,24]}
+{"kind":"shape","id":"sh/rmhk3q5o","slide":2,"bbox":[667,484,480,42]}
+{"kind":"textbox","id":"sh/gfmlkjm1","slide":2,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[683,493,42,22]}
+{"kind":"textbox","id":"sh/90je9cvi","slide":2,"text":"Future Scope","textPreview":"Future Scope","textChars":12,"textLines":1,"bbox":[733,492,370,24]}
+{"kind":"shape","id":"sh/yd0z6103","slide":2,"bbox":[667,546,480,42]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":2,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[683,555,42,22]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":2,"text":"Conclusion","textPreview":"Conclusion","textChars":10,"textLines":1,"bbox":[733,554,370,24]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":2,"text":"HealHub | Internship Presentation | 02","textPreview":"HealHub | Internship Presentation | 02","textChars":38,"textLines":1,"bbox":[910,674,290,20]}
+{"kind":"notes","id":"nt/0jeyu6","slide":2,"text":"Walk the evaluators through the flow of the presentation: start with context, explain the technical design and features, then close with deployment, learning outcomes, and future enhancements."}
+{"kind":"slide","id":"sl/b5kpv0","slide":3,"title":"CONTEXT","textShapes":14}
+{"kind":"shape","id":"sh/e9cvixcz","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/lwval87e","slide":3,"bbox":[0,0,1280,18]}
+{"kind":"shape","id":"sh/wb2hwfyx","slide":3,"bbox":[0,702,1280,18]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":3,"text":"CONTEXT","textPreview":"CONTEXT","textChars":7,"textLines":1,"bbox":[72,38,740,30]}
+{"kind":"textbox","id":"sh/ex0nuxc3","slide":3,"text":"Organization & Internship Objectives","textPreview":"Organization & Internship Objectives","textChars":36,"textLines":1,"bbox":[72,72,860,58]}
+{"kind":"shape","id":"sh/loj2t83i","slide":3,"bbox":[72,138,180,4]}
+{"kind":"shape","id":"sh/w3m94fu1","slide":3,"bbox":[78,174,480,382]}
+{"kind":"textbox","id":"sh/3ex0nuxc","slide":3,"text":"Smart Bridge Educational Services Pvt. Ltd.","textPreview":"Smart Bridge Educational Services Pvt. Ltd.","textChars":43,"textLines":1,"bbox":[108,208,420,64]}
+{"kind":"shape","id":"sh/at47y1kr","slide":3,"bbox":[112,308,12,12]}
+{"kind":"textbox","id":"sh/knih4byh","slide":3,"text":"Industry-focused internship experience","textPreview":"Industry-focused internship experience","textChars":38,"textLines":1,"bbox":[138,300,364,42]}
+{"kind":"shape","id":"sh/d8bat47y","slide":3,"bbox":[112,354,12,12]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":3,"text":"Project-oriented learning model","textPreview":"Project-oriented learning model","textChars":31,"textLines":1,"bbox":[138,346,364,42]}
+{"kind":"shape","id":"sh/v6psfil0","slide":3,"bbox":[112,400,12,12]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":3,"text":"Guidance for full-stack development practices","textPreview":"Guidance for full-stack development practices","textChars":45,"textLines":1,"bbox":[138,392,364,42]}
+{"kind":"shape","id":"sh/d0z61032","slide":3,"bbox":[112,446,12,12]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":3,"text":"Hands-on exposure to real-world web application workflows","textPreview":"Hands-on exposure to real-world web application workflows","textChars":57,"textLines":1,"bbox":[138,438,364,42]}
+{"kind":"shape","id":"sh/vu9knih4","slide":3,"bbox":[606,174,596,382]}
+{"kind":"textbox","id":"sh/k3q5o7qp","slide":3,"text":"Internship Objectives","textPreview":"Internship Objectives","textChars":21,"textLines":1,"bbox":[638,204,350,34]}
+{"kind":"shape","id":"sh/donyd0z6","slide":3,"bbox":[640,274,12,12]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":3,"text":"Build a complete MERN application","textPreview":"Build a complete MERN application","textChars":33,"textLines":1,"bbox":[666,266,474,44]}
+{"kind":"shape","id":"sh/orytsvu9","slide":3,"bbox":[640,322,12,12]}
+{"kind":"textbox","id":"sh/z61032ls","slide":3,"text":"Design secure authentication and role-based access","textPreview":"Design secure authentication and role-based access","textChars":50,"textLines":1,"bbox":[666,314,474,44]}
+{"kind":"shape","id":"sh/al87ed8b","slide":3,"bbox":[640,370,12,12]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":3,"text":"Model healthcare appointments in MongoDB Atlas","textPreview":"Model healthcare appointments in MongoDB Atlas","textChars":46,"textLines":1,"bbox":[666,362,474,44]}
+{"kind":"shape","id":"sh/sfil0rqd","slide":3,"bbox":[640,418,12,12]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":3,"text":"Integrate frontend screens with REST APIs","textPreview":"Integrate frontend screens with REST APIs","textChars":41,"textLines":1,"bbox":[666,410,474,44]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":3,"bbox":[640,466,12,12]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":3,"text":"Deploy frontend, backend, and database to cloud services","textPreview":"Deploy frontend, backend, and database to cloud services","textChars":56,"textLines":1,"bbox":[666,458,474,44]}
+{"kind":"textbox","id":"sh/obm58z25","slide":3,"text":"HealHub | Internship Presentation | 03","textPreview":"HealHub | Internship Presentation | 03","textChars":38,"textLines":1,"bbox":[910,674,290,20]}
+{"kind":"notes","id":"nt/b5kpv0","slide":3,"text":"Explain that the internship focused on applying classroom concepts to a working application. Link the organization context to the project objective: designing and deploying a practical healthcare appointment system."}
+{"kind":"slide","id":"sl/5p8hsi","slide":4,"title":"NEED","textShapes":13}
+{"kind":"shape","id":"sh/d8bat47y","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/2lszqtcj","slide":4,"bbox":[0,0,1280,18]}
+{"kind":"shape","id":"sh/v6psfil0","slide":4,"bbox":[0,702,1280,18]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":4,"text":"NEED","textPreview":"NEED","textChars":4,"textLines":1,"bbox":[72,38,740,30]}
+{"kind":"textbox","id":"sh/d0z61032","slide":4,"text":"Problem Statement / Why HealHub","textPreview":"Problem Statement / Why HealHub","textChars":31,"textLines":1,"bbox":[72,72,860,58]}
+{"kind":"shape","id":"sh/29gr2p8n","slide":4,"bbox":[72,138,180,4]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":4,"text":"Traditional appointment booking creates friction for both patients and doctors.","textPreview":"Traditional appointment booking creates friction for both patients and doctors.","textChars":79,"textLines":1,"bbox":[82,162,760,34]}
+{"kind":"shape","id":"sh/k3q5o7qp","slide":4,"bbox":[90,230,500,118]}
+{"kind":"textbox","id":"sh/donyd0z6","slide":4,"text":"Manual scheduling","textPreview":"Manual scheduling","textChars":17,"textLines":1,"bbox":[116,252,360,28]}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":4,"text":"Phone calls, handwritten records, and missed updates slow down coordination.","textPreview":"Phone calls, handwritten records, and missed updates slow down coordination.","textChars":76,"textLines":1,"bbox":[116,290,425,42]}
+{"kind":"shape","id":"sh/0fepkzup","slide":4,"bbox":[645,230,500,118]}
+{"kind":"textbox","id":"sh/bulwval8","slide":4,"text":"Long waiting times","textPreview":"Long waiting times","textChars":18,"textLines":1,"bbox":[671,252,360,28]}
+{"kind":"textbox","id":"sh/i9s36hcr","slide":4,"text":"Patients may not know slot availability before visiting.","textPreview":"Patients may not know slot availability before visiting.","textChars":56,"textLines":1,"bbox":[671,290,425,42]}
+{"kind":"shape","id":"sh/tovahoza","slide":4,"bbox":[90,390,500,118]}
+{"kind":"textbox","id":"sh/032lszqt","slide":4,"text":"Limited tracking","textPreview":"Limited tracking","textChars":16,"textLines":1,"bbox":[116,412,360,28]}
+{"kind":"textbox","id":"sh/bi9s36hc","slide":4,"text":"Appointment status and doctor responses are hard to monitor.","textPreview":"Appointment status and doctor responses are hard to monitor.","textChars":60,"textLines":1,"bbox":[116,450,425,42]}
+{"kind":"shape","id":"sh/ixczed8v","slide":4,"bbox":[645,390,500,118]}
+{"kind":"textbox","id":"sh/tcj6tova","slide":4,"text":"Doctor discovery","textPreview":"Doctor discovery","textChars":16,"textLines":1,"bbox":[671,412,360,28]}
+{"kind":"textbox","id":"sh/0rqd4vmt","slide":4,"text":"Finding suitable doctors by specialization takes extra effort.","textPreview":"Finding suitable doctors by specialization takes extra effort.","textChars":62,"textLines":1,"bbox":[671,450,425,42]}
+{"kind":"shape","id":"sh/gfmlkjm1","slide":4,"bbox":[245,580,790,54]}
+{"kind":"textbox","id":"sh/90je9cvi","slide":4,"text":"HealHub digitizes discovery, booking, approval, and tracking in one secure platform.","textPreview":"HealHub digitizes discovery, booking, approval, and tracking in one secure platform.","textChars":84,"textLines":1,"bbox":[278,594,720,28]}
+{"kind":"textbox","id":"sh/yd0z6103","slide":4,"text":"HealHub | Internship Presentation | 04","textPreview":"HealHub | Internship Presentation | 04","textChars":38,"textLines":1,"bbox":[910,674,290,20]}
+{"kind":"notes","id":"nt/5p8hsi","slide":4,"text":"Frame HealHub as a response to everyday healthcare access problems. Keep the explanation practical: the system reduces manual coordination, improves slot visibility, and helps users track appointment status."}
+{"kind":"slide","id":"sl/xlva2a","slide":5,"title":"TOOLS","textShapes":14}
+{"kind":"shape","id":"sh/upwb2hwf","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":5,"bbox":[0,0,1280,18]}
+{"kind":"shape","id":"sh/cvixczed","slide":5,"bbox":[0,702,1280,18]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":5,"text":"TOOLS","textPreview":"TOOLS","textChars":5,"textLines":1,"bbox":[72,38,740,30]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":5,"text":"Technology Stack","textPreview":"Technology Stack","textChars":16,"textLines":1,"bbox":[72,72,860,58]}
+{"kind":"shape","id":"sh/54zidony","slide":5,"bbox":[72,138,180,4]}
+{"kind":"shape","id":"sh/cj6tovah","slide":5,"bbox":[80,178,340,170]}
+{"kind":"shape","id":"sh/judg7ads","slide":5,"bbox":[106,206,92,5]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":5,"text":"Frontend","textPreview":"Frontend","textChars":8,"textLines":1,"bbox":[106,228,250,32]}
+{"kind":"textbox","id":"sh/47y1kre1","slide":5,"text":"React.js\nVite\nAxios","textPreview":"React.js | Vite | Axios","textChars":19,"textLines":3,"bbox":[108,270,250,62]}
+{"kind":"shape","id":"sh/tsvu9kni","slide":5,"bbox":[462,178,340,170]}
+{"kind":"shape","id":"sh/m1cfa9w3","slide":5,"bbox":[488,206,92,5]}
+{"kind":"textbox","id":"sh/bm58z25k","slide":5,"text":"Backend","textPreview":"Backend","textChars":7,"textLines":1,"bbox":[488,228,250,32]}
+{"kind":"textbox","id":"sh/4vmtwra5","slide":5,"text":"Node.js\nExpress.js\nREST APIs","textPreview":"Node.js | Express.js | REST APIs","textChars":28,"textLines":3,"bbox":[490,270,250,62]}
+{"kind":"shape","id":"sh/tgfmlkjm","slide":5,"bbox":[844,178,340,170]}
+{"kind":"shape","id":"sh/mp0bi9s3","slide":5,"bbox":[870,206,92,5]}
+{"kind":"textbox","id":"sh/bat47y1k","slide":5,"text":"Database","textPreview":"Database","textChars":8,"textLines":1,"bbox":[870,228,250,32]}
+{"kind":"textbox","id":"sh/4nap4r65","slide":5,"text":"MongoDB Atlas","textPreview":"MongoDB Atlas","textChars":13,"textLines":1,"bbox":[872,270,250,62]}
+{"kind":"shape","id":"sh/t83itgfm","slide":5,"bbox":[80,424,340,170]}
+{"kind":"shape","id":"sh/xs72x4na","slide":5,"bbox":[106,452,92,5]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":5,"text":"Security","textPreview":"Security","textChars":8,"textLines":1,"bbox":[106,474,250,32]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":5,"text":"JWT Authentication\nbcrypt.js","textPreview":"JWT Authentication | bcrypt.js","textChars":28,"textLines":2,"bbox":[108,516,250,62]}
+{"kind":"shape","id":"sh/q1orytsv","slide":5,"bbox":[462,424,340,170]}
+{"kind":"shape","id":"sh/1gvy90je","slide":5,"bbox":[488,452,92,5]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":5,"text":"DevOps","textPreview":"DevOps","textChars":6,"textLines":1,"bbox":[488,474,250,32]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":5,"text":"GitHub\nRender\nVercel","textPreview":"GitHub | Render | Vercel","textChars":20,"textLines":3,"bbox":[490,516,250,62]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":5,"text":"Combined stack: MongoDB Atlas + Express.js + React.js + Node.js with secure APIs and cloud deployment.","textPreview":"Combined stack: MongoDB Atlas + Express.js + React.js + Node.js with secure APIs and cloud deployment.","textChars":102,"textLines":1,"bbox":[84,630,1080,28]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":5,"text":"HealHub | Internship Presentation | 05","textPreview":"HealHub | Internship Presentation | 05","textChars":38,"textLines":1,"bbox":[910,674,290,20]}
+{"kind":"notes","id":"nt/xlva2a","slide":5,"text":"Describe the stack layer by layer. React and Vite power the frontend, Node and Express handle APIs, MongoDB Atlas stores data, JWT and bcrypt secure user access, and Render/Vercel support deployment."}
+{"kind":"slide","id":"sl/flbmh7","slide":6,"title":"MERN 3-TIER DESIGN","textShapes":10}
+{"kind":"shape","id":"sh/czed8v6p","slide":6,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/neloj2t8","slide":6,"bbox":[0,0,1280,18]}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":6,"bbox":[0,702,1280,18]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":6,"text":"MERN 3-TIER DESIGN","textPreview":"MERN 3-TIER DESIGN","textChars":18,"textLines":1,"bbox":[72,38,740,30]}
+{"kind":"textbox","id":"sh/cbulwval","slide":6,"text":"System Architecture","textPreview":"System Architecture","textChars":19,"textLines":1,"bbox":[72,72,860,58]}
+{"kind":"shape","id":"sh/nqxs72x4","slide":6,"bbox":[72,138,180,4]}
+{"kind":"shape","id":"sh/u54zidon","slide":6,"bbox":[72,170,560,404]}
+{"kind":"shape","id":"sh/gbq1oryt","slide":6,"bbox":[720,184,410,76]}
+{"kind":"textbox","id":"sh/qxs72x4n","slide":6,"text":"Presentation Layer","textPreview":"Presentation Layer","textChars":18,"textLines":1,"bbox":[742,198,330,24]}
+{"kind":"textbox","id":"sh/fil0rqd4","slide":6,"text":"React + Vite UI","textPreview":"React + Vite UI","textChars":15,"textLines":1,"bbox":[742,228,330,20]}
+{"kind":"shape","id":"sh/83itgfml","slide":6,"bbox":[923,262,4,30]}
+{"kind":"shape","id":"sh/xobm58z2","slide":6,"bbox":[720,298,410,76]}
+{"kind":"textbox","id":"sh/m94fu18j","slide":6,"text":"Application Layer","textPreview":"Application Layer","textChars":17,"textLines":1,"bbox":[742,312,330,24]}
+{"kind":"textbox","id":"sh/fu18jqh0","slide":6,"text":"Node.js + Express REST APIs","textPreview":"Node.js + Express REST APIs","textChars":27,"textLines":1,"bbox":[742,342,330,20]}
+{"kind":"shape","id":"sh/4fu18jqh","slide":6,"bbox":[923,376,4,30]}
+{"kind":"shape","id":"sh/x0nuxc3y","slide":6,"bbox":[720,412,410,76]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":6,"text":"Database Layer","textPreview":"Database Layer","textChars":14,"textLines":1,"bbox":[742,426,330,24]}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":6,"text":"MongoDB Atlas","textPreview":"MongoDB Atlas","textChars":13,"textLines":1,"bbox":[742,456,330,20]}
+{"kind":"shape","id":"sh/36hcrmhk","slide":6,"bbox":[720,544,410,58]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":6,"text":"JWT travels with protected API requests; deployment separates frontend, backend, and cloud database.","textPreview":"JWT travels with protected API requests; deployment separates frontend, backend, and cloud database.","textChars":100,"textLines":1,"bbox":[744,558,360,30]}
+{"kind":"textbox","id":"sh/lc7u54zi","slide":6,"text":"HealHub | Internship Presentation | 06","textPreview":"HealHub | Internship Presentation | 06","textChars":38,"textLines":1,"bbox":[910,674,290,20]}
+{"kind":"image","id":"im/0je9cvix","slide":6,"name":"","alt":"HealHub architecture diagram","bbox":[100,196,504,342]}
+{"kind":"notes","id":"nt/flbmh7","slide":6,"text":"Explain the three-tier architecture. The React frontend sends Axios requests to Express APIs, protected routes validate JWT tokens, controllers access Mongoose models, and MongoDB Atlas stores persistent data. Mention that Vercel, Render, and Atlas form the deployment architecture."}
+{"kind":"slide","id":"sl/b2zlqk","slide":7,"title":"MONGODB COLLECTIONS","textShapes":8}
+{"kind":"shape","id":"sh/czed8v6p","slide":7,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/neloj2t8","slide":7,"bbox":[0,0,1280,18]}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":7,"bbox":[0,702,1280,18]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":7,"text":"MONGODB COLLECTIONS","textPreview":"MONGODB COLLECTIONS","textChars":19,"textLines":1,"bbox":[72,38,740,30]}
+{"kind":"textbox","id":"sh/cbulwval","slide":7,"text":"Database Design","textPreview":"Database Design","textChars":15,"textLines":1,"bbox":[72,72,860,58]}
+{"kind":"shape","id":"sh/nqxs72x4","slide":7,"bbox":[72,138,180,4]}
+{"kind":"shape","id":"sh/u54zidon","slide":7,"bbox":[68,166,660,430]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":7,"text":"Core Relationships","textPreview":"Core Relationships","textChars":18,"textLines":1,"bbox":[774,182,360,34]}
+{"kind":"shape","id":"sh/qxs72x4n","slide":7,"bbox":[778,248,12,12]}
+{"kind":"textbox","id":"sh/fil0rqd4","slide":7,"text":"Users store patient/doctor credentials and roles","textPreview":"Users store patient/doctor credentials and roles","textChars":48,"textLines":1,"bbox":[804,240,354,60]}
+{"kind":"shape","id":"sh/83itgfml","slide":7,"bbox":[778,312,12,12]}
+{"kind":"textbox","id":"sh/xobm58z2","slide":7,"text":"Doctor Details extend doctor users with profile data","textPreview":"Doctor Details extend doctor users with profile data","textChars":52,"textLines":1,"bbox":[804,304,354,60]}
+{"kind":"shape","id":"sh/m94fu18j","slide":7,"bbox":[778,376,12,12]}
+{"kind":"textbox","id":"sh/fu18jqh0","slide":7,"text":"Availability defines doctor time slots and capacity","textPreview":"Availability defines doctor time slots and capacity","textChars":51,"textLines":1,"bbox":[804,368,354,60]}
+{"kind":"shape","id":"sh/4fu18jqh","slide":7,"bbox":[778,440,12,12]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":7,"text":"Appointments connect patients, doctors, date, slot, and status","textPreview":"Appointments connect patients, doctors, date, slot, and status","textChars":62,"textLines":1,"bbox":[804,432,354,60]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":7,"text":"HealHub | Internship Presentation | 07","textPreview":"HealHub | Internship Presentation | 07","textChars":38,"textLines":1,"bbox":[910,674,290,20]}
+{"kind":"image","id":"im/87ed8bat","slide":7,"name":"","alt":"ER diagram for HealHub","bbox":[92,190,612,382]}
+{"kind":"notes","id":"nt/b2zlqk","slide":7,"text":"Describe the main collections: Users, Doctor Details, Availability, and Appointments. Emphasize that ObjectId references link patient users to appointments and doctor details to doctor users."}
+{"kind":"slide","id":"sl/18a339","slide":8,"title":"PATIENT + DOCTOR PORTALS","textShapes":16}
+{"kind":"shape","id":"sh/h0fepkzu","slide":8,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":8,"bbox":[0,0,1280,18]}
+{"kind":"shape","id":"sh/zupwb2hw","slide":8,"bbox":[0,702,1280,18]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":8,"text":"PATIENT + DOCTOR PORTALS","textPreview":"PATIENT + DOCTOR PORTALS","textChars":24,"textLines":1,"bbox":[72,38,740,30]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":8,"text":"Key Features","textPreview":"Key Features","textChars":12,"textLines":1,"bbox":[72,72,860,58]}
+{"kind":"shape","id":"sh/al87ed8b","slide":8,"bbox":[72,138,180,4]}
+{"kind":"shape","id":"sh/z61032ls","slide":8,"bbox":[84,172,330,58]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":8,"text":"Patient Registration","textPreview":"Patient Registration","textChars":20,"textLines":1,"bbox":[108,188,280,24]}
+{"kind":"shape","id":"sh/hk3q5o7q","slide":8,"bbox":[459,172,330,58]}
+{"kind":"textbox","id":"sh/hgn29gr2","slide":8,"text":"Doctor Registration","textPreview":"Doctor Registration","textChars":19,"textLines":1,"bbox":[483,188,280,24]}
+{"kind":"shape","id":"sh/svu9knih","slide":8,"bbox":[834,172,330,58]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":8,"text":"Secure JWT Login","textPreview":"Secure JWT Login","textChars":16,"textLines":1,"bbox":[858,188,280,24]}
+{"kind":"shape","id":"sh/ap4r65wj","slide":8,"bbox":[84,264,330,58]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":8,"text":"Role-Based Access","textPreview":"Role-Based Access","textChars":17,"textLines":1,"bbox":[108,280,280,24]}
+{"kind":"shape","id":"sh/s36hcrmh","slide":8,"bbox":[459,264,330,58]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":8,"text":"Doctor Search","textPreview":"Doctor Search","textChars":13,"textLines":1,"bbox":[483,280,280,24]}
+{"kind":"shape","id":"sh/a1gvy90j","slide":8,"bbox":[834,264,330,58]}
+{"kind":"textbox","id":"sh/lszqtcj6","slide":8,"text":"Doctor Profile","textPreview":"Doctor Profile","textChars":14,"textLines":1,"bbox":[858,280,280,24]}
+{"kind":"shape","id":"sh/s72x4nap","slide":8,"bbox":[84,356,330,58]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":8,"text":"Appointment Booking","textPreview":"Appointment Booking","textChars":19,"textLines":1,"bbox":[108,372,280,24]}
+{"kind":"shape","id":"sh/1gvy90je","slide":8,"bbox":[459,356,330,58]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":8,"text":"Appointment Tracking","textPreview":"Appointment Tracking","textChars":20,"textLines":1,"bbox":[483,372,280,24]}
+{"kind":"shape","id":"sh/je9cvixc","slide":8,"bbox":[834,356,330,58]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":8,"text":"Availability Management","textPreview":"Availability Management","textChars":23,"textLines":1,"bbox":[858,372,280,24]}
+{"kind":"shape","id":"sh/xs72x4na","slide":8,"bbox":[84,448,330,58]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":8,"text":"Approval / Decline","textPreview":"Approval / Decline","textChars":18,"textLines":1,"bbox":[108,464,280,24]}
+{"kind":"shape","id":"sh/fmlkjm1c","slide":8,"bbox":[459,448,330,58]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":8,"text":"Patient Dashboard","textPreview":"Patient Dashboard","textChars":17,"textLines":1,"bbox":[483,464,280,24]}
+{"kind":"shape","id":"sh/x4nap4r6","slide":8,"bbox":[834,448,330,58]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":8,"text":"Doctor Dashboard","textPreview":"Doctor Dashboard","textChars":16,"textLines":1,"bbox":[858,464,280,24]}
+{"kind":"shape","id":"sh/yhgn29gr","slide":8,"bbox":[84,540,330,58]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":8,"text":"Responsive UI","textPreview":"Responsive UI","textChars":13,"textLines":1,"bbox":[108,556,280,24]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":8,"text":"HealHub | Internship Presentation | 08","textPreview":"HealHub | Internship Presentation | 08","textChars":38,"textLines":1,"bbox":[910,674,290,20]}
+{"kind":"notes","id":"nt/18a339","slide":8,"text":"Present the feature set as two connected experiences: patients can register, search doctors, book appointments, and track status; doctors can manage availability, review requests, and approve or decline appointments."}
+{"kind":"slide","id":"sl/s5iskb","slide":9,"title":"BACKEND SERVICES","textShapes":16}
+{"kind":"shape","id":"sh/d0z61032","slide":9,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/29gr2p8n","slide":9,"bbox":[0,0,1280,18]}
+{"kind":"shape","id":"sh/vu9knih4","slide":9,"bbox":[0,702,1280,18]}
+{"kind":"textbox","id":"sh/knih4byh","slide":9,"text":"BACKEND SERVICES","textPreview":"BACKEND SERVICES","textChars":16,"textLines":1,"bbox":[72,38,740,30]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":9,"text":"REST API Overview","textPreview":"REST API Overview","textChars":17,"textLines":1,"bbox":[72,72,860,58]}
+{"kind":"shape","id":"sh/2lszqtcj","slide":9,"bbox":[72,138,180,4]}
+{"kind":"shape","id":"sh/v6psfil0","slide":9,"bbox":[122,176,1036,52]}
+{"kind":"textbox","id":"sh/kre1w7mp","slide":9,"text":"Authentication","textPreview":"Authentication","textChars":14,"textLines":1,"bbox":[154,189,260,24]}
+{"kind":"textbox","id":"sh/dcbulwva","slide":9,"text":"Register, login, JWT issue, password hashing","textPreview":"Register, login, JWT issue, password hashing","textChars":44,"textLines":1,"bbox":[430,189,620,24]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":9,"bbox":[122,254,1036,52]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":9,"text":"Doctor Management","textPreview":"Doctor Management","textChars":17,"textLines":1,"bbox":[154,267,260,24]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":9,"text":"Create profile, update details, search doctors","textPreview":"Create profile, update details, search doctors","textChars":46,"textLines":1,"bbox":[430,267,620,24]}
+{"kind":"shape","id":"sh/a5gbq1or","slide":9,"bbox":[122,332,1036,52]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":9,"text":"Patient Management","textPreview":"Patient Management","textChars":18,"textLines":1,"bbox":[154,345,260,24]}
+{"kind":"textbox","id":"sh/sji5snel","slide":9,"text":"Profile data, dashboard, appointment history","textPreview":"Profile data, dashboard, appointment history","textChars":44,"textLines":1,"bbox":[430,345,620,24]}
+{"kind":"shape","id":"sh/3ylc7u54","slide":9,"bbox":[122,410,1036,52]}
+{"kind":"textbox","id":"sh/adsji5sn","slide":9,"text":"Appointment Management","textPreview":"Appointment Management","textChars":22,"textLines":1,"bbox":[154,423,260,24]}
+{"kind":"textbox","id":"sh/hgn29gr2","slide":9,"text":"Book, view, approve, decline, track status","textPreview":"Book, view, approve, decline, track status","textChars":42,"textLines":1,"bbox":[430,423,620,24]}
+{"kind":"shape","id":"sh/svu9knih","slide":9,"bbox":[122,488,1036,52]}
+{"kind":"textbox","id":"sh/4r65wjud","slide":9,"text":"Availability Management","textPreview":"Availability Management","textChars":23,"textLines":1,"bbox":[154,501,260,24]}
+{"kind":"textbox","id":"sh/xc3ylc7u","slide":9,"text":"Create/update slots, capacity, schedule checks","textPreview":"Create/update slots, capacity, schedule checks","textChars":46,"textLines":1,"bbox":[430,501,620,24]}
+{"kind":"shape","id":"sh/mlkjm1cf","slide":9,"bbox":[250,596,190,34]}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":9,"text":"CRUD operations","textPreview":"CRUD operations","textChars":15,"textLines":1,"bbox":[262,603,166,22]}
+{"kind":"shape","id":"sh/4zidonyd","slide":9,"bbox":[468,596,240,34]}
+{"kind":"textbox","id":"sh/xkf6dcbu","slide":9,"text":"JWT protected endpoints","textPreview":"JWT protected endpoints","textChars":23,"textLines":1,"bbox":[480,603,216,22]}
+{"kind":"shape","id":"sh/mtwra5gb","slide":9,"bbox":[736,596,220,34]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":9,"text":"JSON API responses","textPreview":"JSON API responses","textChars":18,"textLines":1,"bbox":[748,603,196,22]}
+{"kind":"textbox","id":"sh/83itgfml","slide":9,"text":"HealHub | Internship Presentation | 09","textPreview":"HealHub | Internship Presentation | 09","textChars":38,"textLines":1,"bbox":[910,674,290,20]}
+{"kind":"notes","id":"nt/s5iskb","slide":9,"text":"Summarize the API modules rather than listing every endpoint. Mention that CRUD operations are implemented through REST routes and sensitive actions are protected using JWT middleware."}
+{"kind":"slide","id":"sl/o9ch4q","slide":10,"title":"REAL PROJECT UI","textShapes":17}
+{"kind":"shape","id":"sh/29gr2p8n","slide":10,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/d0z61032","slide":10,"bbox":[0,0,1280,18]}
+{"kind":"shape","id":"sh/kf6dcbul","slide":10,"bbox":[0,702,1280,18]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":10,"text":"REAL PROJECT UI","textPreview":"REAL PROJECT UI","textChars":15,"textLines":1,"bbox":[72,38,740,30]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":10,"text":"Application Screenshots","textPreview":"Application Screenshots","textChars":23,"textLines":1,"bbox":[72,72,860,58]}
+{"kind":"shape","id":"sh/d8bat47y","slide":10,"bbox":[72,138,180,4]}
+{"kind":"shape","id":"sh/knih4byh","slide":10,"bbox":[66,162,270,102]}
+{"kind":"textbox","id":"sh/6psfil0r","slide":10,"text":"Patient Home","textPreview":"Patient Home","textChars":12,"textLines":1,"bbox":[76,242,250,18]}
+{"kind":"shape","id":"sh/4r65wjud","slide":10,"bbox":[368,162,270,102]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":10,"text":"Patient Registration","textPreview":"Patient Registration","textChars":20,"textLines":1,"bbox":[378,242,250,18]}
+{"kind":"shape","id":"sh/f6dcbulw","slide":10,"bbox":[670,162,270,102]}
+{"kind":"textbox","id":"sh/xkf6dcbu","slide":10,"text":"Login","textPreview":"Login","textChars":5,"textLines":1,"bbox":[680,242,250,18]}
+{"kind":"shape","id":"sh/mtwra5gb","slide":10,"bbox":[972,162,270,102]}
+{"kind":"textbox","id":"sh/83itgfml","slide":10,"text":"Search Doctors","textPreview":"Search Doctors","textChars":14,"textLines":1,"bbox":[982,242,250,18]}
+{"kind":"shape","id":"sh/xobm58z2","slide":10,"bbox":[66,288,270,102]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":10,"text":"Available Doctors","textPreview":"Available Doctors","textChars":17,"textLines":1,"bbox":[76,368,250,18]}
+{"kind":"shape","id":"sh/3m94fu18","slide":10,"bbox":[368,288,270,102]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":10,"text":"Doctor Profile","textPreview":"Doctor Profile","textChars":14,"textLines":1,"bbox":[378,368,250,18]}
+{"kind":"shape","id":"sh/sji5snel","slide":10,"bbox":[670,288,270,102]}
+{"kind":"textbox","id":"sh/adsji5sn","slide":10,"text":"Appointment Booking","textPreview":"Appointment Booking","textChars":19,"textLines":1,"bbox":[680,368,250,18]}
+{"kind":"shape","id":"sh/hgn29gr2","slide":10,"bbox":[972,288,270,102]}
+{"kind":"textbox","id":"sh/6psfil0r","slide":10,"text":"My Appointments","textPreview":"My Appointments","textChars":15,"textLines":1,"bbox":[982,368,250,18]}
+{"kind":"shape","id":"sh/val87ed8","slide":10,"bbox":[66,414,270,102]}
+{"kind":"textbox","id":"sh/dcbulwva","slide":10,"text":"Patient Dashboard","textPreview":"Patient Dashboard","textChars":17,"textLines":1,"bbox":[76,494,250,18]}
+{"kind":"shape","id":"sh/2x4nap4r","slide":10,"bbox":[368,414,270,102]}
+{"kind":"textbox","id":"sh/k3q5o7qp","slide":10,"text":"Doctor Home","textPreview":"Doctor Home","textChars":11,"textLines":1,"bbox":[378,494,250,18]}
+{"kind":"shape","id":"sh/donyd0z6","slide":10,"bbox":[670,414,270,102]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":10,"text":"Doctor Registration","textPreview":"Doctor Registration","textChars":19,"textLines":1,"bbox":[680,494,250,18]}
+{"kind":"shape","id":"sh/vmtwra5g","slide":10,"bbox":[972,414,270,102]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":10,"text":"Doctor Dashboard","textPreview":"Doctor Dashboard","textChars":16,"textLines":1,"bbox":[982,494,250,18]}
+{"kind":"shape","id":"sh/o7qpg3ex","slide":10,"bbox":[66,540,270,102]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":10,"text":"Availability","textPreview":"Availability","textChars":12,"textLines":1,"bbox":[76,620,250,18]}
+{"kind":"shape","id":"sh/d4vmtwra","slide":10,"bbox":[368,540,270,102]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":10,"text":"Approval / Decline","textPreview":"Approval / Decline","textChars":18,"textLines":1,"bbox":[378,620,250,18]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":10,"text":"HealHub | Internship Presentation | 10","textPreview":"HealHub | Internship Presentation | 10","textChars":38,"textLines":1,"bbox":[910,674,290,20]}
+{"kind":"image","id":"im/6xkf6dcb","slide":10,"name":"","alt":"Patient Home","bbox":[74,170,254,70]}
+{"kind":"image","id":"im/yhgn29gr","slide":10,"name":"","alt":"Patient Registration","bbox":[376,170,254,70]}
+{"kind":"image","id":"im/nuxc3ylc","slide":10,"name":"","alt":"Login","bbox":[678,170,254,70]}
+{"kind":"image","id":"im/gbq1oryt","slide":10,"name":"","alt":"Search Doctors","bbox":[980,170,254,70]}
+{"kind":"image","id":"im/29gr2p8n","slide":10,"name":"","alt":"Available Doctors","bbox":[74,296,254,70]}
+{"kind":"image","id":"im/d0z61032","slide":10,"name":"","alt":"Doctor Profile","bbox":[376,296,254,70]}
+{"kind":"image","id":"im/knih4byh","slide":10,"name":"","alt":"Appointment Booking","bbox":[678,296,254,70]}
+{"kind":"image","id":"im/val87ed8","slide":10,"name":"","alt":"My Appointments","bbox":[980,296,254,70]}
+{"kind":"image","id":"im/za1gvy90","slide":10,"name":"","alt":"Patient Dashboard","bbox":[74,422,254,70]}
+{"kind":"image","id":"im/s36hcrmh","slide":10,"name":"","alt":"Doctor Home","bbox":[376,422,254,70]}
+{"kind":"image","id":"im/lszqtcj6","slide":10,"name":"","alt":"Doctor Registration","bbox":[678,422,254,70]}
+{"kind":"image","id":"im/5o7qpg3e","slide":10,"name":"","alt":"Doctor Dashboard","bbox":[980,422,254,70]}
+{"kind":"image","id":"im/gr2p8nqx","slide":10,"name":"","alt":"Availability","bbox":[74,548,254,70]}
+{"kind":"image","id":"im/r65wjudg","slide":10,"name":"","alt":"Approval / Decline","bbox":[376,548,254,70]}
+{"kind":"notes","id":"nt/o9ch4q","slide":10,"text":"Use this slide as a visual walkthrough. Point out that the screenshots cover both patient and doctor workflows, including registration, login, search, booking, dashboard, availability, and approval or decline actions."}
+{"kind":"slide","id":"sl/24f3ob","slide":11,"title":"IMPLEMENTATION","textShapes":17}
+{"kind":"shape","id":"sh/y90je9cv","slide":11,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":11,"bbox":[0,0,1280,18]}
+{"kind":"shape","id":"sh/gbq1oryt","slide":11,"bbox":[0,702,1280,18]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":11,"text":"IMPLEMENTATION","textPreview":"IMPLEMENTATION","textChars":14,"textLines":1,"bbox":[72,38,740,30]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":11,"text":"Challenges Faced & Solutions","textPreview":"Challenges Faced & Solutions","textChars":28,"textLines":1,"bbox":[72,72,860,58]}
+{"kind":"shape","id":"sh/58z25kb6","slide":11,"bbox":[72,138,180,4]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":11,"text":"JWT implementation","textPreview":"JWT implementation","textChars":18,"textLines":1,"bbox":[100,168,330,24]}
+{"kind":"shape","id":"sh/neloj2t8","slide":11,"bbox":[448,180,70,4]}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":11,"bbox":[540,160,600,44]}
+{"kind":"textbox","id":"sh/83itgfml","slide":11,"text":"Protected routes and token verification middleware","textPreview":"Protected routes and token verification middleware","textChars":50,"textLines":1,"bbox":[564,171,540,20]}
+{"kind":"textbox","id":"sh/xobm58z2","slide":11,"text":"MongoDB Atlas connection","textPreview":"MongoDB Atlas connection","textChars":24,"textLines":1,"bbox":[100,234,330,24]}
+{"kind":"shape","id":"sh/qxs72x4n","slide":11,"bbox":[448,246,70,4]}
+{"kind":"shape","id":"sh/fil0rqd4","slide":11,"bbox":[540,226,600,44]}
+{"kind":"textbox","id":"sh/4fu18jqh","slide":11,"text":"Environment variables and connection testing","textPreview":"Environment variables and connection testing","textChars":44,"textLines":1,"bbox":[564,237,540,20]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":11,"text":"CORS and API integration","textPreview":"CORS and API integration","textChars":24,"textLines":1,"bbox":[100,300,330,24]}
+{"kind":"shape","id":"sh/m94fu18j","slide":11,"bbox":[448,312,70,4]}
+{"kind":"shape","id":"sh/fu18jqh0","slide":11,"bbox":[540,292,600,44]}
+{"kind":"textbox","id":"sh/4r65wjud","slide":11,"text":"Configured backend origin and Axios calls","textPreview":"Configured backend origin and Axios calls","textChars":41,"textLines":1,"bbox":[564,303,540,20]}
+{"kind":"textbox","id":"sh/xc3ylc7u","slide":11,"text":"Role-based authentication","textPreview":"Role-based authentication","textChars":25,"textLines":1,"bbox":[100,366,330,24]}
+{"kind":"shape","id":"sh/x4nap4r6","slide":11,"bbox":[448,378,70,4]}
+{"kind":"shape","id":"sh/8jqh0fep","slide":11,"bbox":[540,358,600,44]}
+{"kind":"textbox","id":"sh/fyxobm58","slide":11,"text":"Separate patient/doctor flows and route guards","textPreview":"Separate patient/doctor flows and route guards","textChars":46,"textLines":1,"bbox":[564,369,540,20]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":11,"text":"State management","textPreview":"State management","textChars":16,"textLines":1,"bbox":[100,432,330,24]}
+{"kind":"shape","id":"sh/xczed8v6","slide":11,"bbox":[448,444,70,4]}
+{"kind":"shape","id":"sh/8v6psfil","slide":11,"bbox":[540,424,600,44]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":11,"text":"Centralized auth state and dashboard updates","textPreview":"Centralized auth state and dashboard updates","textChars":44,"textLines":1,"bbox":[564,435,540,20]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":11,"text":"Render deployment","textPreview":"Render deployment","textChars":17,"textLines":1,"bbox":[100,498,330,24]}
+{"kind":"shape","id":"sh/1gvy90je","slide":11,"bbox":[448,510,70,4]}
+{"kind":"shape","id":"sh/8z25kb6x","slide":11,"bbox":[540,490,600,44]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":11,"text":"Runtime variables and backend service configuration","textPreview":"Runtime variables and backend service configuration","textChars":51,"textLines":1,"bbox":[564,501,540,20]}
+{"kind":"textbox","id":"sh/r2p8nqxs","slide":11,"text":"Responsive UI","textPreview":"Responsive UI","textChars":13,"textLines":1,"bbox":[100,564,330,24]}
+{"kind":"shape","id":"sh/kjm1cfa9","slide":11,"bbox":[448,576,70,4]}
+{"kind":"shape","id":"sh/94fu18jq","slide":11,"bbox":[540,556,600,44]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":11,"text":"Flexible layouts for patient and doctor screens","textPreview":"Flexible layouts for patient and doctor screens","textChars":47,"textLines":1,"bbox":[564,567,540,20]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":11,"text":"HealHub | Internship Presentation | 11","textPreview":"HealHub | Internship Presentation | 11","textChars":38,"textLines":1,"bbox":[910,674,290,20]}
+{"kind":"notes","id":"nt/24f3ob","slide":11,"text":"Discuss this as a learning slide: each challenge helped improve understanding of real full-stack development. Focus especially on authentication, database connectivity, CORS, deployment variables, and responsive UI issues."}
+{"kind":"slide","id":"sl/kxt5vw","slide":12,"title":"SKILLS GAINED","textShapes":14}
+{"kind":"shape","id":"sh/f6dcbulw","slide":12,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/4r65wjud","slide":12,"bbox":[0,0,1280,18]}
+{"kind":"shape","id":"sh/xc3ylc7u","slide":12,"bbox":[0,702,1280,18]}
+{"kind":"textbox","id":"sh/mtwra5gb","slide":12,"text":"SKILLS GAINED","textPreview":"SKILLS GAINED","textChars":13,"textLines":1,"bbox":[72,38,740,30]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":12,"text":"Learning Outcomes","textPreview":"Learning Outcomes","textChars":17,"textLines":1,"bbox":[72,72,860,58]}
+{"kind":"shape","id":"sh/4zidonyd","slide":12,"bbox":[72,138,180,4]}
+{"kind":"shape","id":"sh/xkf6dcbu","slide":12,"bbox":[88,184,26,26]}
+{"kind":"textbox","id":"sh/qxs72x4n","slide":12,"text":"MERN Stack Development","textPreview":"MERN Stack Development","textChars":22,"textLines":1,"bbox":[134,174,420,44]}
+{"kind":"shape","id":"sh/fil0rqd4","slide":12,"bbox":[626,184,26,26]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":12,"text":"REST API Development","textPreview":"REST API Development","textChars":20,"textLines":1,"bbox":[672,174,420,44]}
+{"kind":"shape","id":"sh/mtwra5gb","slide":12,"bbox":[88,264,26,26]}
+{"kind":"textbox","id":"sh/xkf6dcbu","slide":12,"text":"MongoDB Atlas","textPreview":"MongoDB Atlas","textChars":13,"textLines":1,"bbox":[134,254,420,44]}
+{"kind":"shape","id":"sh/4zidonyd","slide":12,"bbox":[626,264,26,26]}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":12,"text":"JWT Authentication","textPreview":"JWT Authentication","textChars":18,"textLines":1,"bbox":[672,254,420,44]}
+{"kind":"shape","id":"sh/mlkjm1cf","slide":12,"bbox":[88,344,26,26]}
+{"kind":"textbox","id":"sh/xc3ylc7u","slide":12,"text":"Database Design","textPreview":"Database Design","textChars":15,"textLines":1,"bbox":[134,334,420,44]}
+{"kind":"shape","id":"sh/4r65wjud","slide":12,"bbox":[626,344,26,26]}
+{"kind":"textbox","id":"sh/fu18jqh0","slide":12,"text":"Frontend Development","textPreview":"Frontend Development","textChars":20,"textLines":1,"bbox":[672,334,420,44]}
+{"kind":"shape","id":"sh/m94fu18j","slide":12,"bbox":[88,424,26,26]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":12,"text":"Backend Development","textPreview":"Backend Development","textChars":19,"textLines":1,"bbox":[134,414,420,44]}
+{"kind":"shape","id":"sh/nuxc3ylc","slide":12,"bbox":[626,424,26,26]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":12,"text":"Cloud Deployment","textPreview":"Cloud Deployment","textChars":16,"textLines":1,"bbox":[672,414,420,44]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":12,"bbox":[88,504,26,26]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":12,"text":"Git & GitHub","textPreview":"Git & GitHub","textChars":12,"textLines":1,"bbox":[134,494,420,44]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":12,"bbox":[626,504,26,26]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":12,"text":"Team Collaboration","textPreview":"Team Collaboration","textChars":18,"textLines":1,"bbox":[672,494,420,44]}
+{"kind":"shape","id":"sh/58z25kb6","slide":12,"bbox":[224,604,832,44]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":12,"text":"The internship connected academic concepts with a deployed, working full-stack healthcare application.","textPreview":"The internship connected academic concepts with a deployed, working full-stack healthcare application.","textChars":102,"textLines":1,"bbox":[250,616,780,20]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":12,"text":"HealHub | Internship Presentation | 12","textPreview":"HealHub | Internship Presentation | 12","textChars":38,"textLines":1,"bbox":[910,674,290,20]}
+{"kind":"notes","id":"nt/kxt5vw","slide":12,"text":"Explain the technical and professional learning outcomes. Mention the confidence gained in designing APIs, connecting frontend and backend code, modeling data, deploying services, and working with version control."}
+{"kind":"slide","id":"sl/ycptam","slide":13,"title":"CLOUD ARCHITECTURE","textShapes":12}
+{"kind":"shape","id":"sh/4vmtwra5","slide":13,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/bat47y1k","slide":13,"bbox":[0,0,1280,18]}
+{"kind":"shape","id":"sh/mp0bi9s3","slide":13,"bbox":[0,702,1280,18]}
+{"kind":"textbox","id":"sh/tsvu9kni","slide":13,"text":"CLOUD ARCHITECTURE","textPreview":"CLOUD ARCHITECTURE","textChars":18,"textLines":1,"bbox":[72,38,740,30]}
+{"kind":"textbox","id":"sh/47y1kre1","slide":13,"text":"Deployment & Live Demo","textPreview":"Deployment & Live Demo","textChars":22,"textLines":1,"bbox":[72,72,860,58]}
+{"kind":"shape","id":"sh/bm58z25k","slide":13,"bbox":[72,138,180,4]}
+{"kind":"shape","id":"sh/m1cfa9w3","slide":13,"bbox":[352,283,98,4]}
+{"kind":"shape","id":"sh/twra5gbq","slide":13,"bbox":[352,308,98,4]}
+{"kind":"shape","id":"sh/4byhgn29","slide":13,"bbox":[720,204,108,4]}
+{"kind":"shape","id":"sh/m58z25kb","slide":13,"bbox":[720,380,108,4]}
+{"kind":"shape","id":"sh/bq1oryts","slide":13,"bbox":[94,252,310,100]}
+{"kind":"textbox","id":"sh/4byhgn29","slide":13,"text":"GitHub Repository","textPreview":"GitHub Repository","textChars":17,"textLines":1,"bbox":[118,272,260,28]}
+{"kind":"textbox","id":"sh/twra5gbq","slide":13,"text":"Source code and version control","textPreview":"Source code and version control","textChars":31,"textLines":1,"bbox":[118,308,250,24]}
+{"kind":"shape","id":"sh/mhk3q5o7","slide":13,"bbox":[450,168,310,100]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":13,"text":"Vercel","textPreview":"Vercel","textChars":6,"textLines":1,"bbox":[474,188,260,28]}
+{"kind":"textbox","id":"sh/4nap4r65","slide":13,"text":"Frontend React + Vite deployment","textPreview":"Frontend React + Vite deployment","textChars":32,"textLines":1,"bbox":[474,224,250,24]}
+{"kind":"shape","id":"sh/t83itgfm","slide":13,"bbox":[450,344,310,100]}
+{"kind":"textbox","id":"sh/mp0bi9s3","slide":13,"text":"Render","textPreview":"Render","textChars":6,"textLines":1,"bbox":[474,364,260,28]}
+{"kind":"textbox","id":"sh/bat47y1k","slide":13,"text":"Backend Node.js + Express service","textPreview":"Backend Node.js + Express service","textChars":33,"textLines":1,"bbox":[474,400,250,24]}
+{"kind":"shape","id":"sh/3ex0nuxc","slide":13,"bbox":[828,252,310,100]}
+{"kind":"textbox","id":"sh/at47y1kr","slide":13,"text":"MongoDB Atlas","textPreview":"MongoDB Atlas","textChars":13,"textLines":1,"bbox":[852,272,260,28]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":13,"text":"Cloud database and persistent storage","textPreview":"Cloud database and persistent storage","textChars":37,"textLines":1,"bbox":[852,308,250,24]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":13,"text":"Live Demo URL: add deployed frontend link during viva\nRepository: https://github.com/SupratikVarun/HealHub-Care-At-Your-Fingertips","textPreview":"Live Demo URL: add deployed frontend link during viva | Repository: https://github.com/SupratikVarun/HealHub-Care-At-Your-Fingertips","textChars":130,"textLines":2,"bbox":[150,548,980,58]}
+{"kind":"textbox","id":"sh/32lszqtc","slide":13,"text":"HealHub | Internship Presentation | 13","textPreview":"HealHub | Internship Presentation | 13","textChars":38,"textLines":1,"bbox":[910,674,290,20]}
+{"kind":"notes","id":"nt/ycptam","slide":13,"text":"Explain the deployment split: GitHub stores the code, Vercel serves the frontend, Render hosts the backend APIs, and MongoDB Atlas stores application data. Replace or mention the exact live demo URL if available during the presentation."}
+{"kind":"slide","id":"sl/1ikot9","slide":14,"title":"NEXT STEPS","textShapes":16}
+{"kind":"shape","id":"sh/72x4nap4","slide":14,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/0nuxc3yl","slide":14,"bbox":[0,0,1280,18]}
+{"kind":"shape","id":"sh/p8nqxs72","slide":14,"bbox":[0,702,1280,18]}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":14,"text":"NEXT STEPS","textPreview":"NEXT STEPS","textChars":10,"textLines":1,"bbox":[72,38,740,30]}
+{"kind":"textbox","id":"sh/7ed8bat4","slide":14,"text":"Future Enhancements, Conclusion & Thank You","textPreview":"Future Enhancements, Conclusion & Thank You","textChars":43,"textLines":1,"bbox":[72,72,860,58]}
+{"kind":"shape","id":"sh/0z61032l","slide":14,"bbox":[72,138,180,4]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":14,"text":"Future Enhancements","textPreview":"Future Enhancements","textChars":19,"textLines":1,"bbox":[92,166,430,34]}
+{"kind":"shape","id":"sh/i5sneloj","slide":14,"bbox":[102,226,12,12]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":14,"text":"AI Health Assistant","textPreview":"AI Health Assistant","textChars":19,"textLines":1,"bbox":[128,218,474,40]}
+{"kind":"shape","id":"sh/fu18jqh0","slide":14,"bbox":[102,270,12,12]}
+{"kind":"textbox","id":"sh/m94fu18j","slide":14,"text":"AI-Based Doctor Recommendation","textPreview":"AI-Based Doctor Recommendation","textChars":30,"textLines":1,"bbox":[128,262,474,40]}
+{"kind":"shape","id":"sh/x0nuxc3y","slide":14,"bbox":[102,314,12,12]}
+{"kind":"textbox","id":"sh/4fu18jqh","slide":14,"text":"Video Consultation","textPreview":"Video Consultation","textChars":18,"textLines":1,"bbox":[128,306,474,40]}
+{"kind":"shape","id":"sh/fil0rqd4","slide":14,"bbox":[102,358,12,12]}
+{"kind":"textbox","id":"sh/qxs72x4n","slide":14,"text":"Online Payment Gateway","textPreview":"Online Payment Gateway","textChars":22,"textLines":1,"bbox":[128,350,474,40]}
+{"kind":"shape","id":"sh/xobm58z2","slide":14,"bbox":[102,402,12,12]}
+{"kind":"textbox","id":"sh/83itgfml","slide":14,"text":"Email & SMS Notifications","textPreview":"Email & SMS Notifications","textChars":25,"textLines":1,"bbox":[128,394,474,40]}
+{"kind":"shape","id":"sh/fepkzupw","slide":14,"bbox":[102,446,12,12]}
+{"kind":"textbox","id":"sh/mtwra5gb","slide":14,"text":"Digital Prescriptions","textPreview":"Digital Prescriptions","textChars":21,"textLines":1,"bbox":[128,438,474,40]}
+{"kind":"shape","id":"sh/u18jqh0f","slide":14,"bbox":[102,490,12,12]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":14,"text":"Medical History Management","textPreview":"Medical History Management","textChars":26,"textLines":1,"bbox":[128,482,474,40]}
+{"kind":"shape","id":"sh/c7u54zid","slide":14,"bbox":[102,534,12,12]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":14,"text":"Mobile Application","textPreview":"Mobile Application","textChars":18,"textLines":1,"bbox":[128,526,474,40]}
+{"kind":"shape","id":"sh/u9knih4b","slide":14,"bbox":[662,178,474,230]}
+{"kind":"textbox","id":"sh/judg7ads","slide":14,"text":"Conclusion","textPreview":"Conclusion","textChars":10,"textLines":1,"bbox":[694,210,380,36]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":14,"text":"HealHub was successfully implemented as a secure, role-based MERN healthcare appointment platform with appointment scheduling, dashboards, MongoDB Atlas storage, and cloud deployment readiness.","textPreview":"HealHub was successfully implemented as a secure, role-based MERN healthcare appointment platform with appointment scheduling, dashboards...","textChars":193,"textLines":1,"bbox":[694,270,388,88]}
+{"kind":"textbox","id":"sh/1032lszq","slide":14,"text":"Thank You","textPreview":"Thank You","textChars":9,"textLines":1,"bbox":[690,466,396,58]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":14,"text":"Questions & Answers","textPreview":"Questions & Answers","textChars":19,"textLines":1,"bbox":[738,536,300,32]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":14,"text":"HealHub | Internship Presentation | 14","textPreview":"HealHub | Internship Presentation | 14","textChars":38,"textLines":1,"bbox":[910,674,290,20]}
+{"kind":"notes","id":"nt/1ikot9","slide":14,"text":"Close by summarizing the completed implementation and learning experience. Then invite questions. Keep this final slide confident and brief."}
