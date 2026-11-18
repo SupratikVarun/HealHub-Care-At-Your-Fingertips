@@ -33,7 +33,18 @@ const request = async (endpoint, { method = 'GET', body, token } = {}) => {
 };
 
 export const api = {
-  get: (endpoint, token) => request(endpoint, { method: 'GET', token }),
-  post: (endpoint, body, token) => request(endpoint, { method: 'POST', body, token }),
-  patch: (endpoint, body, token) => request(endpoint, { method: 'PATCH', body, token }),
+  get: (endpoint, token) =>
+    request(endpoint, { method: "GET", token }),
+
+  post: (endpoint, body, token) =>
+    request(endpoint, { method: "POST", body, token }),
+
+  put: (endpoint, body, token) =>
+    request(endpoint, { method: "PUT", body, token }),
+
+  patch: (endpoint, body, token) =>
+    request(endpoint, { method: "PATCH", body, token }),
+
+  delete: (endpoint, token) =>
+    request(endpoint, { method: "DELETE", token }),
 };

@@ -96,22 +96,90 @@ if (selectedTime) {
     }
 
     try {
-      await api.post(
-        '/appointments',
-        {
-          doctorId: selectedDoctor,
-          date,
-          time,
-          reason,
-        },
-        token,
-      );
+  const orderData = await api.post(
+    "/payments/create-order",
+    {
+      doctorId: selectedDoctor,
+      date,
+      time,
+    },
+    token
+  );
 
-      setSuccess('Appointment booked successfully. Redirecting...');
-      setTimeout(() => navigate('/my-appointments'), 1200);
-    } catch (err) {
-      setError(err.message || 'Unable to book appointment');
-    }
+  console.log("Order Data:", orderData);
+
+ 
+
+  const options = {
+    key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+
+    amount: orderData.order.amount,
+
+    currency: orderData.order.currency,
+
+    name: "HealHub",
+
+    description: "Doctor Consultation",
+
+    order_id: orderData.order.id,
+
+    prefill: {
+      name: user.name,
+      contact: user.phone,
+    },
+
+     method: {
+    upi: true,
+    card: true,
+    netbanking: true,
+    wallet: true,
+  },
+
+    theme: {
+      color: "#1976d2",
+    },
+
+   handler: async function (response) {
+  try {
+
+    const verifyData = await api.post(
+      "/payments/verify",
+      {
+        razorpay_order_id: response.razorpay_order_id,
+        razorpay_payment_id: response.razorpay_payment_id,
+        razorpay_signature: response.razorpay_signature,
+
+        doctorId: selectedDoctor,
+        date,
+        time,
+        reason,
+      },
+      token
+    );
+
+    setSuccess("Payment Successful!");
+
+setTimeout(() => {
+    navigate("/my-appointments");
+}, 1000);
+
+  } catch (err) {
+
+    console.error(err);
+
+    alert(err.message || "Payment verification failed.");
+
+  }
+},
+  };
+
+  const paymentObject = new window.Razorpay(options);
+
+  paymentObject.open();
+
+} catch (err) {
+  setError(err.message || "Unable to start payment.");
+}
   };
 
   if (!user) {

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import { useAuth } from "../context/AuthContext";
 import { api } from "../api";
 
 const sampleDoctors = [
@@ -53,6 +54,9 @@ const formatTime = (time) => {
 };
 
 function Doctors() {
+
+  const { user } = useAuth();
+
   const [searchParams, setSearchParams] = useSearchParams();
   const [doctors, setDoctors] = useState([]);
   const [backendAvailable, setBackendAvailable] = useState(true);
@@ -191,71 +195,76 @@ function Doctors() {
         <hr />
 
                 <hr />
+{user?.role === "patient" &&
+  doctor.availability &&
+  doctor.availability.length > 0 && (
+    <div className="availability-preview">
 
-              {doctor.availability && doctor.availability.length > 0 && (
-  <div className="availability-preview">
+      <p><strong>Available Appointments</strong></p>
 
-    <p><strong>Available Appointments</strong></p>
+      {doctor.availability.map((slot, index) => {
 
-    {doctor.availability.map((slot, index) => {
+        const remaining =
+          slot.maxAppointments - slot.bookedCount;
 
-      const remaining =
-        slot.maxAppointments - slot.bookedCount;
+        let symbol = "🟢";
 
-      let symbol = "🟢";
+        if (remaining === 2) symbol = "🟡";
+        if (remaining === 1) symbol = "🟠";
 
-      if (remaining === 2) symbol = "🟡";
-      if (remaining === 1) symbol = "🟠";
+        return (
+          <p key={index}>
+            {symbol} {formatTime(slot.time)} 
 
-      return (
-        <p key={index}>
-          {symbol} {formatTime(slot.time)} &nbsp;&nbsp;
+            {remaining === 1
+              ? "Last slot"
+              : `${remaining} slots left`}
+          </p>
+        );
+      })}
 
-          {remaining === 1
-            ? "Last slot"
-            : `${remaining} slots left`}
-        </p>
-      );
-    })}
-
-  </div>
+    </div>
 )}
 
-             <div className="availability-box">
-  <strong>Available Slots:</strong>
 
-  {doctor.availability &&
-  doctor.availability.filter(
-    (slot) => slot.bookedCount < slot.maxAppointments
-  ).length > 0 ? (
+           {user?.role === "patient" && (
+  <div className="availability-box">
+    <strong>Available Slots:</strong>
 
-    doctor.availability
-      .filter(
-        (slot) => slot.bookedCount < slot.maxAppointments
-      )
-      .map((slot, index) => (
-        <div key={index} className="slot-item">
+    {doctor.availability &&
+    doctor.availability.filter(
+      (slot) => slot.bookedCount < slot.maxAppointments
+    ).length > 0 ? (
 
-          <span className="slot-badge">
-            {slot.date} • {formatTime(slot.time)}
-          </span>
+      doctor.availability
+        .filter(
+          (slot) => slot.bookedCount < slot.maxAppointments
+        )
+        .map((slot, index) => (
+          <div key={index} className="slot-item">
 
-          <Link
-            to={`/appointment?doctorId=${doctor._id}&date=${slot.date}&time=${slot.time}`}
-          >
-            <button className="doctor-btn">
-              Book Appointment
-            </button>
-          </Link>
+            <span className="slot-badge">
+              {slot.date} • {formatTime(slot.time)}
+            </span>
 
-        </div>
-      ))
+            <Link
+              to={`/appointment?doctorId=${doctor._id}&date=${slot.date}&time=${slot.time}`}
+            >
+              <button className="doctor-btn">
+                Book Appointment
+              </button>
+            </Link>
 
-  ) : (
-    <p>No slots available</p>
-  )}
+          </div>
+        ))
+
+    ) : (
+      <p>No slots available</p>
+    )}
+  </div>
+)}
 </div>
-            </div>
+            
           ))}
         </div>
       </div>
